@@ -1,0 +1,36 @@
+/* 2024.0528 7교시_2 */
+.container{
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
+  border: 1px solid black;
+
+  display: grid;
+  grid-template-areas:
+  "a a b"
+  "c c b"
+  "d e e "
+  /* "" 한 줄이 행 하나
+    비우고 싶은 공간은 작성x가 아닌 .을 넣어주면 됨 */
+  ;
+}
+
+.container>div{
+  border: 1px solid red;
+}
+
+.container>div:nth-child(1){
+  grid-area: a;
+}
+.container>div:nth-child(2){
+  grid-area: b;
+}
+.container>div:nth-child(3){
+  grid-area: c;
+}
+.container>div:nth-child(4){
+  grid-area: d;
+}
+.container>div:nth-child(5){
+  grid-area: e;
+}

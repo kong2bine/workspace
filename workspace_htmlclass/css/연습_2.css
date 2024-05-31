@@ -1,0 +1,24 @@
+.container{
+  /* border: 1px solid black; */
+  width: 900px;
+  margin: auto;
+}
+
+table, tr, td{
+  border: 1px solid black;
+}
+
+table{
+  border-collapse: collapse;
+  /* 너비 비율은 부모 요소가 기준 */
+  width: 130%;
+}
+
+.aaa{
+  text-align: right;
+}
+
+table>tbody>tr>td:first-child{
+  background-color: rgb(247, 238, 238);
+}
+

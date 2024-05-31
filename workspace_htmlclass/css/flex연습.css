@@ -1,0 +1,41 @@
+.container{
+  width: 70vw;
+  text-align: center;
+  font-style: bold;
+}
+
+.flex1 > div:nth-child(1){
+  flex-basis: 10%;
+}
+.flex1 > div:nth-child(2){
+  flex-basis: 90%;  
+}
+
+.header{
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+  overflow: hidden;
+}
+
+.main{
+
+}
+
+.main > div{
+  height: 100px;
+}
+
+.side{
+  background-color: red;
+  float: left;
+}
+
+.content{
+  background-color: green;
+  float: left;
+}
+
+.footer{
+  background-color: burlywood;
+}

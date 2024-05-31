@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      border-collapse: collapse; 
+      border: 1px solid black;
+      width: 300px; 
+      text-align: center;
+    }
+    tr, td{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<!-- ctrl+space 실행가능한 목록 보여줌-->
+<!--table태그 안에 아래 3가지와 tr,caption,colgroup 태그만 올 수 있음
+   thead : 테이블헤드
+   tbody : 테이블내용
+   tfoot : 테이블내용정리 
+
+   caption : 테이블의 정보(잘 안 씀)
+   colgroup : 각 열에 대해 너비를 지정하는 태그
+   ㄴcol(콜럼), col width 열 너비 설정
+
+  디자인(표 색칠 등)을 하지 않는다면 사용안해도 무관
+  -->
+<body>
+  <table>
+    <colgroup>
+      <col width="50%">
+      <col width="20%">
+      <col width="*%">
+      <!-- 마지막은 *만 입력해도 남은 비율이 다 입력됨 -->
+    </colgroup>
+    <caption>학생 정보</caption>
+    <thead>
+      <tr>
+        <td>이름</td>
+        <td>나이</td>
+        <td>점수</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>김길동</td>
+        <td>20</td>
+        <td>90</td>
+      </tr>
+      <tr>        
+        <td>임꺽정</td>
+        <td>30</td>
+        <td>80</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>평균</td>
+        <td>25</td>
+        <td>85</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.box{
+  width: 300px;
+  height: 150px;
+  border: 1px solid black;
+  font-size: 20px;
+  margin: 50px;
+}
+
+.box1{
+  overflow: visible;
+}
+
+.box2{
+  overflow: hidden;
+}
+
+.box3{
+  overflow: scroll;
+}
+/* scroll은 안의 내용량과 관계없이 무조건 스크롤바 생성 */
+
+.box4{
+  overflow: auto;
+}
+/* 박스 안의 내용량에 맞춰 스크롤 생성 or 스크롤x */

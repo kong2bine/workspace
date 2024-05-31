@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+}
+h3{
+  padding: 0px;
+  margin: 0px;
+}
+.content{
+  background-image: url(배경.jpg);
+  background-repeat: no-repeat;
+  /* background-size : 원본이미지가 잘리지 않게 하기 위해 사용하는 식
+    atuo : 원본 사이즈
+    contain : 패턴이 잘리지 않게 맞춰줌  
+    cover :영역의 여백 없이 꽉 채움
+          단, 이미지의 비율은 유지됨*/
+  background-size: cover;
+  /*  vw : 실제 내용의 가로
+      vh : 실제 내용의 세로 */
+  width: 100vw;
+  height: 90vh;
+  /* border: 1px solid black; */
+}

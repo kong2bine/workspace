@@ -1,0 +1,48 @@
+.container{
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+
+  display: flex
+}
+
+.container > div{
+  /* width: 100px;
+  height: 100px; */
+  border: 1px solid red;
+}
+
+.flex1{
+  flex-direction: row;
+  /*ㄴdefault값이 row
+      주축이행 */
+  justify-content: center;
+  align-items: stretch;
+}
+  
+
+.flex2{
+  flex-direction: column;
+  justify-content: center;
+  /* 주축이 열->교차축 방향으로는 너비가 꽉 참 */
+  align-items: stretch;
+}
+
+/* .flex1 > div:nth-child(2){
+  align-self: flex-start;
+} */
+
+.flex1 > div:nth-child(1){
+  flex-basis: 50%;  
+}
+.flex1 > div:nth-child(2){
+  flex-basis: 30%; 
+}
+.flex1 > div:nth-child(3){
+  flex-basis: 10%;   
+}
+.flex1 > div:nth-child(4){
+  flex-basis: 10%; 
+}
+

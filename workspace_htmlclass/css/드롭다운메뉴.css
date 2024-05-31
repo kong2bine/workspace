@@ -1,0 +1,67 @@
+/* 2024.5.30 1교시 */
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu>li{
+  width: 150px;
+  text-align: center;
+  padding: 12px 0px;
+  background-color: black;
+
+  position: relative; 
+}
+
+.menu>li:after{
+  content: "|";
+  color: white;
+  position: absolute;
+  right: 0px;
+}
+.menu>li:last-child:after{
+  content: none;
+  /* ㄴ마지막 메뉴 |없애려면 */
+}
+
+.menu a{
+  color: white;
+  text-decoration: none;
+}
+
+.sub-menu{
+  position: absolute;
+  top: 43px;
+  left: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  /* display: none; */
+  /* display는 transition 적용 안됨*/
+  /* opacity: 0 */
+  transition: all 1s;
+  max-height: 0px;
+}
+
+.sub-menu>li{
+  margin: 8px 0px;
+}
+
+.sub-menu>li:hover{
+  font-weight: 600;
+}
+
+.menu>li:hover .sub-menu{
+  /* display: block; */
+  /* opacity: 1; */
+  max-height: 200px;
+  /* px-px로 해야 효과 적용 가능
+     px-auto하면 효과는 적용 안됨*/
+}
+
+
+

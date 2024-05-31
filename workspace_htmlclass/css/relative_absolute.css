@@ -1,0 +1,24 @@
+.img-div{
+  background-color: lightgray;
+  position: relative;
+}
+
+.img-div img{
+  border: 2px solid orange;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.img-div img:nth-child(1){
+  z-index: 3;
+}
+.img-div img:nth-child(2){
+  left: 40px;
+  z-index: 2;
+}
+.img-div img:nth-child(3){
+  left: 80px;
+  z-index: 1;
+}
+
+/* z-index가 높은 순으로 상단에 위치함 */

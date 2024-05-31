@@ -1,0 +1,20 @@
+.container{
+  width: 700px;
+  border: 3px solid black;
+  margin: auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+p{
+  font-size: 16px;
+  /* line-height: 50px; */
+  margin-top: 0px;
+  text-align: justify;
+}
+
+img{
+  float: right;
+}
+/* float : 원래 박스 위에 떠 있다고 판단하고 float 높이,너비 등 인지x
+ ㄴ높이 맞추려면 부모 태그에 overflow :hidden; 설정하면 됨 */

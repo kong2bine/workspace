@@ -1,0 +1,69 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* vh높이 */
+}
+
+.container{
+  width: 800px;
+  height: 300px;
+  /* 
+    box-shadow(좌측상단이 기준점)
+    첫번째 : x축으로의 그림자 이동
+    두번째 : y축으로의 그림자 이동
+    세번째 : 그림자의 퍼짐 정도
+    네번째 : 그림자의 색
+  */
+  box-shadow: 0px 0px 8px lightgray;
+  border-radius: 5px;
+}
+
+h2{
+  margin-top: 20px;
+  padding-left: 15px;
+}
+.h2{
+  border-bottom: 1px solid lightgray;
+  margin: 15px;
+}
+
+.box{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.blank1{
+  width: 400px;
+  border-radius: 5px;
+}
+
+.box1{
+  flex-basis: 60%;
+  padding: 20px;
+  margin: 30px;
+  box-shadow: 0px 0px 6px lightgray;
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+}
+
+.box2{
+  flex-basis: 40%;
+  justify-content: space-evenly;
+}
+.box2>div:first-child{
+}
+
+.g1{
+  padding-left: 40px;
+}
+
+ul{
+  font-size: 13px;
+}
+
+
+
+
+

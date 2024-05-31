@@ -1,0 +1,51 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>폼 태그를 사용한 입력받기 1</h1>
+
+  <input type="text" value="홍길동"> <br>
+  <input type="text" value="홍길동" readonly> <br>
+  <input type="text" placeholder="이름 입력"> <br>
+  <!-- value는 input에 초기값을 설정해주는 속성
+       placeholder는 안내멘트
+       readonly :읽기 전용, 수정 불가 -->
+  <input type="password"> <br>
+  <input type="date"><br>
+  <input type="color"><br>
+  <input type="number" min="1" max="5"><br><br>
+
+  <input type="checkbox" checked>운동
+  <!-- checked 자동 체크 설정 -->
+  <input type="checkbox">등산
+  <input type="checkbox">독서
+  <br><br>
+
+  <input type="radio" name="gender">남성
+  <input type="radio" name="gender" checked>여성
+  <!-- name을 같게 설정해두면 둘 중 하나만 선택 가능 -->
+
+  <br><br>
+
+  <select>
+    <option>치킨</option>
+    <option selected>피자</option>
+    <option>족발</option>
+    <!-- selected 가장 처음 보이는 옵션으로 설정해주는 속성-->
+  </select>
+
+  <br><br>
+  <textarea rows="10" cols="50"></textarea>
+
+  <!--버튼 만들기 -->
+  <input type="button" value="버튼1" onclick="alert"123> <br>
+  <button type="button">버튼2</button>
+  <hr>
+  
+
+</body>
+</html>   

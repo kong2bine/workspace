@@ -1,0 +1,41 @@
+/* 2024.05.28 pm12:05 */
+body{
+  background-color: skyblue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* ㄴ플렉스 사용 후 세로 배치를 원할 때 */
+  justify-content: center;
+  align-items: center;
+}
+
+.contact{
+  width: 300px;
+  height: 70px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.5s;
+}
+img{
+  width: 50px;
+  border-radius: 50%;
+  /* ㄴ완전히 둥글게 만들고 싶으면 50%입력하면 됨 */
+  border: 1px solid lightgrey;
+}
+.name{
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.email{
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.contact:hover{
+  scale: 1.1;
+}

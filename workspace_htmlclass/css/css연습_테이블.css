@@ -1,0 +1,23 @@
+table, tr, td{
+  border : 1px solid black
+}
+table{
+  border-collapse: collapse;
+  width: 900px;
+  margin: auto;
+}
+.title-tr{
+  background-color: aqua;
+}
+
+table > tbody> tr > td:first-child{
+  text-align: center;
+}
+.btn-div{
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 테이블 만들 때 tbody 만들어주는게 내 정신건강에0 좋음 */
+
+/* ctrl + h  */

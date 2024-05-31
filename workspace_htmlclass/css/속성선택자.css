@@ -1,0 +1,16 @@
+body{
+  padding: 20px;
+}
+
+input{
+  margin: 16px;
+}
+
+/* 속성 선택자
+   태그[속성]{} */
+input[type="text"]{
+  width: 300px;
+}
+input[class="a"]{
+  border: 1px solid lightpink;
+}

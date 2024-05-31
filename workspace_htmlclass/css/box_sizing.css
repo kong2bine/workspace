@@ -1,0 +1,24 @@
+.container{
+  border: 5px solid red;
+  width: 500px;
+  margin: 20px;
+}
+
+.inner{
+  font-size: 2rem;
+  border: 5px solid black;
+  width: 500px;
+  padding: 0px 10px;
+}
+
+.inner1{
+  box-sizing: content-box;
+}
+/* content-box 안에 있는 실제 너비만
+  따로 설정하지 않으면 기본값이 content-box임 */
+
+.inner2{
+  box-sizing: border-box;
+}
+/* border-box : 테두리까지 너비로 하겠다 */
+

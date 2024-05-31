@@ -1,0 +1,30 @@
+.container{
+  margin: auto;
+  padding: 10px;
+  overflow: hidden;
+  background-color: skyblue;
+  width: 100vw;
+  height: 100vh;
+}
+
+p{
+  font-size: 16px;
+  /* line-height: 50px; */
+  margin-top: 5px;
+}
+
+img{
+  width: 70px;
+  border-radius: 50px;
+  border: 1px solid lightgrey;
+}
+
+div{
+  margin-top: 50px;
+  background-color: white;
+}
+
+.container>div{
+  display: flex;
+}
+

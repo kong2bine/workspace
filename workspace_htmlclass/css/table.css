@@ -1,0 +1,49 @@
+body{
+  padding: 10px;
+}
+div{
+  margin: 30px;
+}
+
+table{
+  width: 700px;
+  text-align: center;
+  line-height: 45px;
+  height: 45px;
+  font-weight: 500;
+}
+.title{
+  background-color: rgb(110, 110, 189);
+  color: white;
+  text-align: center;
+  line-height: 45px;
+  height: 45px;
+  border-top: 2px solid rgb(49, 49, 107);
+  border-bottom: 2px solid rgb(49, 49, 107);
+}
+.white{
+  border-bottom: 1.5px solid lightgray;
+}
+.grey{
+  border-bottom: 1.5px solid lightgray;
+  background-color: rgb(235, 235, 235);
+}
+
+.white:hover{
+  background-color: rgb(194, 194, 194);
+  transition: all 0.3s;
+}
+.grey:hover{
+  background-color: grey;
+  transition: all 0.3s;
+}
+
+#left{
+  text-align: left;
+  padding-left: 20px;
+}
+
+#number{
+  text-align: center;
+  padding-left: 15px;
+}

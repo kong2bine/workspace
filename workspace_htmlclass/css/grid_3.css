@@ -1,0 +1,32 @@
+/* 2024.05.28 8교시 */
+.container{
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
+  border: 1px solid black;
+
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2,100px);
+
+  align-content: center;
+  justify-content: center;
+  /* start가 기본값임
+     grid는 주축이 없기 때문에 세로가로 고정
+     align-content 행(세로)
+     justify-content 열(가로) */
+
+  justify-items: center;
+  align-items: center;
+  /* ㄴ기본값이 stretch
+       가로세로 고정 */
+}
+
+.container>div{
+  border: 1px solid red;
+}
+
+.container>div:last-child{
+  justify-self: stretch;
+  align-self: stretch;
+}

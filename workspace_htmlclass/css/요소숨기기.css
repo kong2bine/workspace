@@ -1,0 +1,15 @@
+.img1{
+  visibility: visible;
+}
+/* hidden으로 숨길 수 0, but 자리는 보존됨 */
+
+.img2{
+  /* display: none; */
+}
+/* display:none은 자리도 사라짐 */
+
+.img3{
+  opacity: 0.5;
+}
+/* 투명도 조절 0~1사이 숫자 입력 */
+

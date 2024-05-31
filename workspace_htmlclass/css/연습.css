@@ -1,0 +1,35 @@
+.d1{
+ text-align: center;
+  width: 200px;
+  font-weight: bold;
+  background-color:rgb(195, 213, 219) 
+}
+.d2{
+  font-weight: bold;
+  width: 110px;
+  text-align: center;
+}
+.d3{
+  width: 210px;
+}
+.d4{
+  width: 80px;
+}
+.d5{
+  width: 50px;}
+
+span{     
+  font-size: 0.9rem;
+  /* rem=비율로 표시 */
+  color: red;
+}
+ table{
+  margin: auto;
+ }
+
+ .btn-div{
+  text-align: center;
+  margin-top: 10px;
+}
+
+

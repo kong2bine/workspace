@@ -1,0 +1,51 @@
+ul{
+  list-style-type: none;
+}
+ul>li{
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  background-color: white;
+  font-size: 15px;
+}
+
+/* body{
+  background-image: url(화면구현_메인배경.PNG);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 90vh;
+
+}  */
+
+div>table tr:first-child{
+  color: white;
+}
+.f1{
+  background-color: rgb(66, 62, 62);
+  font-size: 23px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.m4{
+position: fixed;
+top: 60px;
+left: 850px;
+}
+
+.m1{
+  margin: auto;
+}
+
+.b1{
+  width: 250px;
+  height: 20px;
+}
+
+.b8{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+

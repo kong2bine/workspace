@@ -1,0 +1,22 @@
+table, tr, td{
+  border : 1px solid gainsboro
+}
+table{
+  border-collapse: collapse;
+  width: 1300px;
+  margin: auto;
+  text-align: left;
+  
+}
+
+span{
+  color: red;
+}
+
+h1,h2,h3{
+  font-size: 15px;
+  font-style: bold;
+}
+table>tbody>tr>td:first-child{
+  background-color:rgb(243, 241, 241);
+}
