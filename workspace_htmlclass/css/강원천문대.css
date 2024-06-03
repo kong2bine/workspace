@@ -1,0 +1,78 @@
+body{
+  width: 1200px;
+  height: 100vh;
+}
+
+.title{
+  background-color: darkblue;
+  color: white; 
+  height: 100px
+}
+
+.title>div:nth-child(2){
+  display: flex;
+  background-color: rgb(1, 1, 71);
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.main{
+  background-image: url(slider03.jpg);
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main>div:first-child{
+  text-align: center;
+  color: white;
+  background-color: black;
+  opacity: 0.5;
+  display: inline-block;
+  padding: 30px 50px;
+  margin: 100px 400px;
+}
+.info{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  }
+
+.notice{
+  padding: 10px 10px;
+}
+
+.reservation{
+  background-image: url(banner.jpg);
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 70px;
+}
+
+button{
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  margin-top: 10px;
+}
+
+.footer{
+  background-color: rgb(252, 240, 225);
+  height: 100px;
+  display: flex;
+}
+
+.footer>div:first-child{
+  font-weight: 750;
+  font-size: 1.8rem;
+  padding: 30px 30px;
+}
+
+.footer_right{
+  text-align: center;
+  padding: 30px 200px;
+}

@@ -7,7 +7,7 @@ package 변수와자료형;
 //자바에서 기본자료형은 총 8개
 //참조자료형은 무한대
 
-//기본자료형
+//기본자료형 - 소문자로 시작함
 //정수 타입: byte, short, int, long
 //실수 타입: float, double
 //논리 타입: boolean
