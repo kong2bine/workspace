@@ -11,6 +11,7 @@ public class 변수_1 {
         //'='(대입연산자) 우측의 값을 왼쪽에 저장(대입, 할당)
         num = 5;
         //num = 1.5; 오류
+        //변수의 초기화 : 변수 선언 후 제일 먼저 입력한 값
 
         System.out.println("num");
         System.out.println(num);
