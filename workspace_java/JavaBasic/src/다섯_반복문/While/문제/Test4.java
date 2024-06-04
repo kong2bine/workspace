@@ -1,4 +1,4 @@
-package 다섯_반복문.While;
+package 다섯_반복문.While.문제;
 
 public class Test4 {
     public static void main(String[] args) {

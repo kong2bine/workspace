@@ -8,8 +8,9 @@ public class While_4 {
         int sum = 0; //1~5까지의 합을 저장할 변수
 
         while(i<6){
-            sum = sum +i;
+            sum = sum +i; //sum += 1;로 써도 됨(같은 식임)
             i++;
         }
+        System.out.println(sum);
     }
 }
