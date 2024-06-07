@@ -1,5 +1,5 @@
 package 여섯_배열.문제;
-
+//2024.6.5 3교시?아니면 4교시ㅜㅜ
 import java.util.Arrays;
 
 //시험 출제 문제

@@ -4,6 +4,7 @@ public class 배열_1 {
     public static void main(String[] args) {
         //정수를 저장할 수 있는 배열 선언
         //같은 자료형을 여러개 저장할 수 있음
+        //배열도 자료형임!
 
         //배열 선언 (만들거니까 준비시켜
         int[] arr1;

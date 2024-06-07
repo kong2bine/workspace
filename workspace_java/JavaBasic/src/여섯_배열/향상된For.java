@@ -3,6 +3,7 @@ package 여섯_배열;
 public class 향상된For {
     public static void main(String[] args) {
         //for-each문 : 배열에서 값을 읽을 때 사용
+
         //배열은 {ㅌ.ㅌ.ㅌ}가 들어 있는 '주소'를 가지고 옴(?)
         //ㄴ값이 복사된게 아님.
         int[] arr1 = {3, 7, 10, 5, 1};

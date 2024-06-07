@@ -1,5 +1,5 @@
 package 여섯_배열;
-
+//2024.6.4 아마 8교시?
 public class 랜덤 {
     public static void main(String[] args) {
         //1~10 랜덤한 정수

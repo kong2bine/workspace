@@ -12,6 +12,9 @@ public class 기본자료형의_형변환 {
         int num4 = (int)num3; //실수 데이터 num3를 int로 강제 형 변환
         System.out.println("num4 =" + num4);
 
+        //형변환 정수-실수만 가능
+        //문자열 불가능!!
+
 
     }
 }
