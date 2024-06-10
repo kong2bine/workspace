@@ -2,7 +2,7 @@ package 일곱_메서드;
 
 import java.util.Arrays;
 
-public class Test3_6_9강사님 {
+public class Test_3_6_9강사님 {
     public static void main(String[] args) {
         int[] a = {1,2,3,4,5,6,7,8,9,10};
         int[] result = test9(a);

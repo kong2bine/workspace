@@ -9,6 +9,8 @@ public class 메서드_5 {
 
         System.out.println(getSum2(6,1));
 
+        double result2 = getSum2(8,6);
+
     }
 
     //매개변수로 전달된 두 정수의 합을 리턴하는 메서드

@@ -1,9 +1,7 @@
 package 일곱_메서드;
 //2024.6.7 2교시
 
-import java.util.Scanner;
-
-public class Test2_1_5 {
+public class Test_2_1_5 {
     public static void main(String[] args) {
 /*        Scanner sc = new Scanner(System.in);
         int num1 = sc.nextInt();

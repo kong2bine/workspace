@@ -12,7 +12,13 @@ public class Student {
 
     //나이를 변경하는 메서드
     public void setAge(int a){
-        age = a;
+
+        if(a<0){
+            age = 0;
+        }
+        else{
+            age = a;
+        }
     }
 
     public void introduce(){
