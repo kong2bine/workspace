@@ -14,7 +14,7 @@ public class ManTeacherVer {
     }
 
     //setter : 멤버 변수 각각의 값을 변경하는 메서드
-    //setter의 이름은 반드시 set변수명(변수명 첫글자 대문자) 으로 지정해야함
+    //setter의 이름은 반드시 set변수명(변수명 첫글자 대문자)으로 지정해야함
     //이름을 변경하는 메서드
     public void setName(String name){
         this.name = name;

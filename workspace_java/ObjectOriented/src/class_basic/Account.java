@@ -17,13 +17,14 @@ package class_basic;
 기본 생성자를 자동으로 만들어 줌(내용도 없고, 매개변수도 없는 생성자)*/
 //기본 생성자의 형태 : public Account(){}
 //ㄴ생성자가 호출은 되나 아무것도 나타나지 않음
-//생성자는 필요에 따라 여러개 만들 수 있음
+//생성자는 필요에 따라 여러개 만들 수 있음(오버로딩 문법은 지켜야 함)
 
 
 public class Account {
     String accNumber;
     String owner;
     int money; //예금액
+
 
     //생성자(변수의 초기화)
     //생성자의 이름은 클래스명과 동일하게 작성. 리턴타입x
