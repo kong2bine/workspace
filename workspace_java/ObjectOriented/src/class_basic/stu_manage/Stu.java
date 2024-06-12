@@ -1,4 +1,4 @@
-package stu_manage;
+package class_basic.stu_manage;
 //2024.6.11 6,7교시
 //학생 클래스는 이름, 나이, 학점(A,B,C..), 연락처 정보를 가지고 있다
 public class Stu {

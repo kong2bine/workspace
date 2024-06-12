@@ -1,9 +1,6 @@
-package Mem;
-
-import java.nio.channels.Pipe;
-
+package class_basic.Mem;
 //2024.6.11 4교시
-public class Add {
+public class Sub {
     private int a;
     private int b;
 
@@ -12,6 +9,6 @@ public class Add {
         this.b = b;
     }
     public int calculate(){
-        return a + b;
+        return a - b;
     }
 }

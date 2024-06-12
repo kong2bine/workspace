@@ -1,4 +1,4 @@
-package Mem;
+package class_basic.Mem;
 //2024.6.11 4교시
 public class MemberServiceExample {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Mem;
+package class_basic.Mem;
 //2024.6.11 3교시
 //18.생성자-4번
 

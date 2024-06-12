@@ -1,6 +1,5 @@
-package stu_manage;
+package class_basic.stu_manage;
 //2024.6.11 6,7교시
-import java.nio.channels.Pipe;
 import java.util.Scanner;
 
 //학생관리 클래스는 학생등록 삭생정보변경(연락처), 학생정보출력의 기능이 있다

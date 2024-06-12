@@ -1,4 +1,4 @@
-package stu_manage;
+package class_basic.stu_manage;
 //2024.6.11 6,7교시
 import java.util.Scanner;
 

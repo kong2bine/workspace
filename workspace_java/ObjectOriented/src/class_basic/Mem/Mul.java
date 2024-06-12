@@ -1,6 +1,6 @@
-package Mem;
+package class_basic.Mem;
 //2024.6.11 4교시
-public class Div {
+public class Mul {
     private int a;
     private int b;
 
@@ -9,6 +9,6 @@ public class Div {
         this.b = b;
     }
     public int calculate(){
-        return a / b;
+        return a * b;
     }
 }

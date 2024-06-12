@@ -1,4 +1,4 @@
-package Mem;
+package class_basic.Mem;
 
 public class MemberService {
     public boolean login(String id, String password){

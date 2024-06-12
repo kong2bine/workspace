@@ -1,4 +1,4 @@
-package Mem;
+package class_basic.Mem;
 
 import java.util.Scanner;
 
