@@ -12,4 +12,7 @@ public class Member {
         this.name = name;
         this.id = id;
     }
+
+    public Member(String kim, String number, String 김, String number1) {
+    }
 }
