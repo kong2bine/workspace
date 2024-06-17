@@ -1,4 +1,4 @@
-package collection.test;
+package collection.list.test;
 //2024.6.14 7교시 list 5번 문제
 
 public class Test_Member {

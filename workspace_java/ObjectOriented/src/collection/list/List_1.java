@@ -37,5 +37,7 @@ public class List_1 {
             System.out.println(list1.get(i));
         }
 
+        //add, get, remove, size : 리스트라는 인터페이스에 저장된 추상메서드
+
     }
 }

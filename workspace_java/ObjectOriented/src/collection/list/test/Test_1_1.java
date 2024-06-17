@@ -1,9 +1,8 @@
-package collection.test;
+package collection.list.test;
 //2024.6.14 6교시
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Test_1_1 {
     public static void main(String[] args) {

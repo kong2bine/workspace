@@ -1,11 +1,18 @@
-package collection.test;
-//2024.6
+package collection.list.test;
+//2024.6.17 1교시
 
 public class Test_Student {
-    String name;
-    int scoreKor;
-    int scoreEng;
-    int score;
+    private String name;
+    private int scoreKor;
+    private int scoreEng;
+    private int score;
+
+    public Test_Student(String name, int scoreKor, int scoreEng, int score) {
+        this.name = name;
+        this.scoreKor = scoreKor;
+        this.scoreEng = scoreEng;
+        this.score = scoreKor + scoreEng;
+    }
 
     public String getName() {
         return name;

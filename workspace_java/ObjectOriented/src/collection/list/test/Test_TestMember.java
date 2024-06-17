@@ -1,7 +1,5 @@
-package collection.test;
+package collection.list.test;
 //2024.6.14 7교시 list 6번 문제
-
-import class_basic.Mem.Member;
 
 import java.util.ArrayList;
 import java.util.List;
