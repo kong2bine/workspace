@@ -1,0 +1,102 @@
+localhost:8080/a
+ㄴ주소창에 입력
+
+//콘솔창, 인터넷창 모두 확인하면서 작업해야함
+
+
+VScode
+
+D드라이브 - 스터디 - dev - workspace - SpringFirst- src- main
+- resources - templates클릭만 한 후 폴더선택
+
+
+
+-----------------------------------------------------------------------------------------
+
+FirstController 클래스
+
+@Controller
+public class FirstController
+	
+	@GetMapping("/a")
+	public String goFirst(){
+	     return "first";
+	}
+	
+	@GetMappipng("/b")
+	public String goSecond(){
+	     System.out.println(111);
+	     return "second";
+	}
+
+	@GetMapping("/c")
+	public String goThird(){
+	     System.out.println(222);
+	     return "third";
+	}
+
+-----------------------------------------------------------------------------------------
+
+
+SpringFirstApplication.java 클래스
+
+@SpringBootApplication
+
+
+-----------------------------------------------------------------------------------------
+
+SpringFirstApplication 클래스
+
+public class SpringFirstApplication
+
+
+-----------------------------------------------------------------------------------------
+html파일은 resources -> templates ->에 생성
+
+<>first.html (html파일)
+
+<>first.html
+!
+<head>
+     <meta charset="UTF-8">
+     <title>Title</title>
+</head>
+<body>
+	안녕하세요~
+	 <br>
+	<a href="/c">second.html파일로 이동</a>
+</body>
+</html>
+
+
+-----------------------------------------------------------------------------------------
+
+
+<>second.html (html파일)
+!
+<head>
+     <meta charset="UTF-8">
+     <title>Title</title>
+</head>
+<body>
+	second 파일입니다. <br>
+	<a href="/c">third.html파일로 이동</a>
+</body>
+</html>
+
+
+-----------------------------------------------------------------------------------------
+
+
+<>third.html (html파일)
+!
+<head>
+     <meta charset="UTF-8">
+     <title>Title</title>
+</head>
+<body>
+	html 파일입니다. <br>
+	<a href="/c">third.html파일로 이동</a>
+</body>
+</html>
+
