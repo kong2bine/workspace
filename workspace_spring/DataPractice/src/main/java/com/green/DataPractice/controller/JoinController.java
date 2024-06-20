@@ -18,6 +18,7 @@ public class JoinController {
         return "reg_member";
     }
 
+    //커맨드 객체 : 컨트롤러에 있는 메서드의 매개변수에 선언된 객체
     //커맨드 객체는 model을 사용하지 않아도 자동으로 html로 전달됨
     //이 때 넘어가는 데이터는 클래스명에서 앞글자만 소문자로 바꾼 이름으로 넘어간다(html로)
     @PostMapping("/result")

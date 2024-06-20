@@ -7,10 +7,17 @@
 </head>
 <body>
   <h2>학생 성적 입력 프로그램</h2>
-  <h5>000 학생의 성적을 입력합니다</h5>
-  국어 <input type="text">
-  영어 <input type="text">
-  수학 <input type="text">
-  <button>확인</button>
+  <h5>[[${scoreVO.name}]] 학생의 성적을 입력합니다</h5>
+  <form action="/stTotal" method="post">
+    <input type="hidden" name="name" th:value="${scoreVO.name}">
+    <input type="hidden" name="year" th:value="${scoreVO.year}">
+    <input type="hidden" name="gender" th:value="${scoreVO.gender}">
+    <input type="hidden" name="tel" th:value="${scoreVO.tel[0]}">
+    <input type="hidden" name="tel" th:value="${scoreVO.tel[1]}">
+    국어 <input type="text" name="korScore"><br>
+    영어 <input type="text" name="engScore"><br>
+    수학 <input type="text"name="mathScore"><br>
+    <input type="submit" value="확인">
+  </form>
 </body>
 </html>

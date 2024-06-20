@@ -1,13 +1,17 @@
 package com.green.DataPractice.vo;
 
+import java.util.Arrays;
+
+//2024.6.20 2교시
 public class ScoreVO {
     private String name;
-    private String grade;
-    private String tel;
-    private int KorScore;
-    private int EngScore;
-    private int MathScore;
-    private int avg;
+    //ㄴ변수명과 html의 name 속성값(이름)이 일치해야 함
+    private int year;
+    private String[] tel;
+    private String gender;
+    private int korScore;
+    private int engScore;
+    private int mathScore;
 
     public String getName() {
         return name;
@@ -17,64 +21,66 @@ public class ScoreVO {
         this.name = name;
     }
 
-    public String getGrade() {
-        return grade;
+    public int getYear() {
+        return year;
     }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public String getTel() {
+    public String[] getTel() {
         return tel;
     }
 
-    public void setTel(String tel) {
+    public void setTel(String[] tel) {
         this.tel = tel;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     public int getKorScore() {
-        return KorScore;
+        return korScore;
     }
 
     public void setKorScore(int korScore) {
-        KorScore = korScore;
+        this.korScore = korScore;
     }
 
     public int getEngScore() {
-        return EngScore;
+        return engScore;
     }
 
     public void setEngScore(int engScore) {
-        EngScore = engScore;
+        this.engScore = engScore;
     }
 
     public int getMathScore() {
-        return MathScore;
+        return mathScore;
     }
 
     public void setMathScore(int mathScore) {
-        MathScore = mathScore;
-    }
-
-    public int getAvg() {
-        return avg;
-    }
-
-    public void setAvg(int avg) {
-        this.avg = avg;
+        this.mathScore = mathScore;
     }
 
     @Override
     public String toString() {
         return "ScoreVO{" +
                 "name='" + name + '\'' +
-                ", grade='" + grade + '\'' +
-                ", tel='" + tel + '\'' +
-                ", KorScore=" + KorScore +
-                ", EngScore=" + EngScore +
-                ", MathScore=" + MathScore +
-                ", avg=" + avg +
+                ", year=" + year +
+                ", tel=" + Arrays.toString(tel) +
+                ", gender='" + gender + '\'' +
+                ", korScore=" + korScore +
+                ", engScore=" + engScore +
+                ", mathScore=" + mathScore +
                 '}';
     }
 }
+
+

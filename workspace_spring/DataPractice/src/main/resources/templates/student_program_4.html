@@ -6,12 +6,19 @@
   <title>Document</title>
 </head>
 <body>
-    <table>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-    <button>처음으로 가기</button>
+  <h2>학생 성적 입력 프로그램</h2>
+  <p> [[${scoreVO.name}]] 학생의 정보입니다</p>
+  이름 : [[${scoreVO.name}]] <br>
+  학년 : [[${scoreVO.year}]] <br>
+  연락처 : [[${scoreVO.tel[0]}]]-[[${scoreVO.tel[1]}]] <br>
+  성별 : [[${scoreVO.gender}]] <br>
+  국어 : [[${scoreVO.korScore}]] <br>
+  수학 : [[${scoreVO.mathScore}]] <br>
+  영어 : [[${scoreVO.engScore}]] <br>
+  평균 : [[${avg}]] <br>
+  평균 : [[${(scoreVO.korScore + scoreVO.engScore + scoreVO.mathScore)/3.0}]] <br>
+
+  <input type="button" value="처음으로 가기">
+
 </body>
 </html>

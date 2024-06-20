@@ -6,22 +6,23 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="/" method="post">
     <h2>학생 성적 입력 프로그램</h2>
-    <h5> 학생의 기본정보를 입력합니다</h5>
-    학년 <input type="text"> <br>
+    <p>[[${scoreVO.name}]] 학생의 기본정보를 입력합니다</p>
+    <form action="/stScore" method="post">
+    <input type="hidden" name="name" th:value="${scoreVO.name}">
+      학년 <input type="text" name="year"> <br>
     연락처 
-    <select>
-      <option value="e">010</option>
-      <option value="w">011</option>
-      <option value="q">016</option>
+    <select name="tel">
+      <option value="010">010</option>
+      <option value="070">070</option>
+      <option value="052">052</option>
     </select>
-    <input type="text"> <br>
+    <input type="text" name="tel"> <br>
     성별 
-    <input type="radio" name="gender1">남
-    <input type="radio" name="gender1">여 <br>
+    <input type="radio" name="gender" value="남자">남
+    <input type="radio" name="gender" value="여자">여 <br>
     <input type="submit" value="확인">
-    <button>뒤로 가기</button>
+    <input type="button" value="뒤로가기">
   </form>
 </body>
 </html>
