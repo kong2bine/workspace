@@ -1,0 +1,36 @@
+<!-- 2024.6.21 6,7교시 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+    게시글 상세 페이지입니다. <br>
+    글번호 : [[${board.boardNum}]] <br>
+    제목 : [[${board.title}]] <br>
+    작성자 : [[${board.writer}]] <br>
+    작성일 : [[${board.createDate}]] <br>
+    내용 : [[${board.content}]] <br>
+  
+    <!-- 현재 상세보기하고 있는 게시글을 삭제하고 게시글 목록 페이지로 이동 -->
+    <input type="button" value="삭제하기" th:onclick="goDelete([[${board.boardNum}]])">
+
+  <script>
+  //삭제하기 버튼  클릭시 실행
+    function goDelete(boardNum){
+      //confirm 실행 후 확인을 클릭하면 true 리턴, 취소를 클릭하면 false를 리턴
+      const result = confirm('정말 삭제하시겠어요?');
+    
+      //확인을 클릭했을 때만 삭제 진행
+      if(result){
+        //locatino.href = '/delete?boardNum=' + boardNum; // /delete?boardNum = 3
+        location.href = `/delete?boardNum=${boardNum}`;
+
+        
+      }
+  }
+  </script>
+ </body>
+ </html>

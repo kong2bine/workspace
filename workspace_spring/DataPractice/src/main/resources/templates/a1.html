@@ -1,0 +1,31 @@
+<!-- 2024.6.21 1교시 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  [[${stuName}]]  [[${score}]]
+  <!-- /a2로 이동 할 때 'java'라는 데이터를 'name'이라는 이름으로 전달 -->
+  <a href="/a2?address=java">
+    <!-- ㄴa태그를 사용하면 넘어가는 주소창에 내용이 보이기 때문에 노출되면 안되는 내용은 작성x -->
+    <h3>두번째 페이지로 이동</h3>
+  </a>
+
+  <br>
+
+  <a href="/a3?name=kim&age=30">
+    <h3>세번째 페이지로 이동</h3>
+  </a>
+
+  <br>
+
+  <a th:href="@{/a3(name=${stuName}, age=${score})}">
+    <!-- ㄴ타임리프 기본문법2.pdf - A태그 사용 - 3번 째 문법 사용한 예 -->
+    <h3>세번째 페이지로 이동</h3>
+  </a>
+
+ </body>
+ </html>
