@@ -1,0 +1,44 @@
+<!-- 2024.6.24 -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  학번 : [[${student.boardNum}]] <br>
+  이름 : [[${student.stuName}]]<br>
+  국어 점수 : [[${student.korScore}]]<br> 
+  영어 점수 : [[${student.engScore}]]<br>
+  학생소개 : [[${student.intro}]]<br>
+  <input type="button" value="뒤로가기" onclick="goBack()">
+  <input type="button" value="학생수정" th:onclick="goUpdateForm([[${student.boardNum}]])">
+  <button type="button" th:onclick="goDelete([[${student.boardNum}]])">학생삭제</button>
+ 
+ <script>
+  //뒤로가기 버튼 클릭시 실행 함수
+  function goBack(){
+    //뒤로가기
+    //history.back(-1); <-이렇게 하거나 ㄱ이렇게 하거나 둘 다 가능
+
+    location.href = '/';
+  }
+  //학생 삭제 클릭시 실행
+  function goDelete(boardNum){
+   const result = confirm('삭제할까요?'); 
+   
+   if(result){
+    location.href = `/stuDelete?boardNum=${boardNum}`;
+  }
+  }
+
+  //학생 수정 버튼 클릭 -> 학생정보를 수정할 수 있는 페이지로 이동
+  function goUpdateForm(boardNum){
+    location.href = `/updateForm?boardNum=${boardNum}`;
+
+  }
+ </script> 
+</body>
+</html>
