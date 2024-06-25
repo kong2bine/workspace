@@ -89,7 +89,7 @@ public class StudentController {
         studentService.updateStu(studentVO);
 
         //
-        return "redirect:/stuDetail?stuName=" + studentVO.getBoardNum();
+        return "redirect:/stuDetail?boardNum=" + studentVO.getBoardNum();
     }
 
 }
