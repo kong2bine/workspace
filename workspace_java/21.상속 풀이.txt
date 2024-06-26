@@ -1,0 +1,15 @@
+21.상속
+
+//2024.6.12 3교시
+
+2번
+-Child()-		    super(); ----------------------------->this(대한민국); ------------->this.nation = 대한민국
+this("홍길동")------->  this.name = 홍길동           	  print(Parent() Call) 	 print(Parent(String nation call))
+print("Child() Call")      pring("Child(String name) call")
+
+Parent(String nation) call
+Parent() Call
+Child(String name)
+Child() Call
+
+

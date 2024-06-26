@@ -66,3 +66,5 @@ ROLLBACK;
 -- 40살 이하인 회원을 모두 삭제
 DELETE FROM test_member
 WHERE MEM_AGE <=40;
+
+SELECT * FROM test_member;
