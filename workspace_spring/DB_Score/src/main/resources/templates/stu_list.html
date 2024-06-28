@@ -22,16 +22,20 @@
       </tr>
     </th:block>
     <th:block th:unless="${#lists.isEmpty(stuList)}">
-      <tr th:each=" stu :${stuList}">
+      <tr th:each=" stu : ${stuList}">
         <td>[[${stu.stuNum}]]</td>
-        <td>[[${stu.stuName}]]</td>
+        <td><a th:href="@{/stuDetail(stuNum =${stu.stuNum})}">[[${stu.stuName}]]</a></td>
         <td>[[${stu.korScore}]]</td>
         <td>[[${stu.engScore}]]</td>
         <td>[[${stu.korScore + stu.engScore}]]</td>
       </tr>
-
     </th:block>
   </table>
-  <input type="submit" value="학생등록" onclick="">  
+  <input type="button" value="학생등록" onclick="goReg()"> 
+  <script>
+    function goReg(){
+      location.href = '/regForm';
+    }
+  </script> 
 </body>
 </html>

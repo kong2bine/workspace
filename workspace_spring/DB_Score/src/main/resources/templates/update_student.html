@@ -6,30 +6,15 @@
   <title>Document</title>
 </head>
 <body>
-  <table>
-    <tr>
-      <td>학번</td>
-      <td></td>
-      <td>이름</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>국어점수</td>
-      <td></td>
-      <td>영어점수</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>자기소개</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-  <input type="submit" value="뒤로가기" onclick="">
-  <input type="submit" value="정보수정" onclick="">
+<form action="/updateStudent" method="post">
+  <input type="hidden" name="stuNum" th:value="${student.stuNum}">
+    학번 : [[${student.stuNum}]] <br>
+    이름 : <input type="text" name="stuName" th:value="${student.stuName}"> <br>
+    국어 점수 : <input type="text" name="korScore" th:value="${student.korScore}"> <br>
+    영어 점수 : <input type="text" name="engScore" th:value="${student.engScore}"> <br>
+    자기 소개 : <textarea name="intro">[[${student.intro}]]</textarea> <br>
+    <input type="submit" value="정보수정">
+</form>
 
-  <script>
-  </script>  
 </body>
 </html>
