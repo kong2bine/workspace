@@ -20,7 +20,3 @@ SELECT STU_NUM
  	, INTRO
  FROM score_info
  WHERE STU NUM = 82;
- 
- 
-        
-
