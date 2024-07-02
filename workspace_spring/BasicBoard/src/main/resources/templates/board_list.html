@@ -30,8 +30,9 @@
     </thead>
     <tbody>
       <tr th:each="board : ${boardList}">
+        <!-- 이거 다 getter 호출하는 문법임 -->
         <td>[[${board.boardNum}]]</td>
-        <td>[[${board.title}]]</td>
+        <td><a th:href="@{/boardDetail(boardNum=${board.boardNum})}">[[${board.title}]]</a></td>
         <td>[[${board.writer}]]</td>
         <td>[[${board.createDate}]]</td>
         <td>[[${board.readCnt}]]</td>

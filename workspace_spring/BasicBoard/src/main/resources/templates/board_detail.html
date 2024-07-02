@@ -9,11 +9,32 @@
  <body>
   <table>
     <tr>
-      
+      글번호 : [[${board.boardNum}]]<br>
+              <!-- ㄴ board의 자료형 = boardVO임
+               (intelliJ 컨트롤러 - 게시글 상세조회 참고) -->
+      제목 : [[${board.title}]]<br>
+      작성자 : [[${board.writer}]]<br>
+      작성일 : [[${board.createDate}]]<br>
+      내용 : [[${board.content}]]<br>
+      조회수 : [[${board.readCnt}]]<br>
     </tr>
   </table>
-  <input type="text" value="목록가기">
-  <input type="text" value="수정">
-  <input type="text" value="삭제">
+  <input type="button" value="목록가기1" onclick="test1()">
+  <input type="button" value="목록가기2" onclick="test2()">
+  <input type="button" value="수정">
+  <input type="button" value="삭제" th:onclick="deleteBoard([[${board.boardNum}]])">
+
+  <script>
+    function test1(){
+      history.back(-1);
+    }
+
+    function test2(){
+      location.href = '/';
+    }
+    function deleteBoard(boardNum){
+      location.href = `/deleteBoard?boardNum=${boardNum}`;
+    }
+  </script>
  </body>
  </html>

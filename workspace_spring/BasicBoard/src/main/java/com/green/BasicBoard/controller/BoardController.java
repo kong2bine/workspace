@@ -1,4 +1,4 @@
-//2024.7.1
+//2024.7.1 & 7.2
 package com.green.BasicBoard.controller;
 
 import com.green.BasicBoard.service.BoardService;
@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -46,5 +47,25 @@ public class BoardController {
         return "redirect:/";
     }
 
+    // 게시글 상세조회
+    @GetMapping("/boardDetail")
+    public String boardDetail(@RequestParam(name = "boardNum")int boardNum, Model model){
+        //조회수 증가
+        boardService.updateReadCnt(boardNum);
 
+        model.addAttribute("board", boardService.getBoardDetail(boardNum));
+        /*ㄱ이거 한줄로 ㄴ이렇게 요약 가능
+        BoardVO board = boardService.getBoardDetail(boardNum);
+        model.addAttribute("board",board);*/
+
+        return "board_detail";
+    }
+
+    //게시글 삭제
+    @GetMapping("/deleteBoard")
+    public String deleteBoard(@RequestParam(name = "boardNum")int boardNum){
+        boardService.deleteBoard(boardNum);
+
+        return "redirect:/";
+    }
 }

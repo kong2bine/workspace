@@ -14,8 +14,14 @@ public interface BoardService {
     void insertBoard(BoardVO boardVO);
 
     //게시글 상세 조회
+    BoardVO getBoardDetail(int boardNum);
+
     //게시글 삭제
-    //게시글 수정
+    void deleteBoard(int boardNum);
+
     //조회수 증가
+    void updateReadCnt(int boardNum);
+
+
 
 }
