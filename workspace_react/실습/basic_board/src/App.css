@@ -1,0 +1,15 @@
+.App{
+  text-align: center;
+}
+.board_list{
+  color: white;
+  border: 1px solid lightpink;
+  background-color: lightcoral;
+}
+.submitList{
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+}

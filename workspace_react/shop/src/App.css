@@ -1,0 +1,48 @@
+.header{
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding: 20px;
+  font-size: 1.3rem;
+}
+
+.banner{
+  height: 200px;
+  width: 100%;
+}
+
+img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  object-position: center;
+}
+
+.item_list{
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  background-color: white;
+  font-weight: 700;
+  height: 250px;
+  width: 70%;
+}
+
+.book-name{
+
+  width: 210px;
+}
+
+.book-name img{
+  width: 100%;
+}
+
+.book-name h3{
+  margin: 0px;
+}
+
+.book-name p{
+  margin: 0px;
+}

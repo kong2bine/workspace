@@ -1,0 +1,18 @@
+node.js 설치하고
+VsCode 터미널에서 최초 1회만 실행
+
+npm install -g create-react-app
+
+npx create-react-app .
+' .' : 현재 폴더에 만들겠다는 것
+
+npm install axios
+
+npm install react-router-dom
+
+index.js가서 </BrowserRouter>로 APP감싸야함
+
+
+------------------------------------------
+프로젝트 시작 : npm start
+종료 : ctrl c
