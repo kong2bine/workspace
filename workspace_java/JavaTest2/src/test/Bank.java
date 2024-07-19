@@ -33,33 +33,35 @@ public class Bank {
     //1. 매개변수로 전달되는 계좌번호 및 회원이름과 동일한 정보를 가진
     // 고객 정보를 리턴하는 메서드를 정의하시오.
     // 만약 매개변수로 전달된 계좌번호와 일치하는 고객이 없다면 null을 리턴하시오.
-    private Scanner sc;
-    public void Account(){
-        boolean isSame = true;
-        boolean isNotSame = false;
+    public Client getClient(String accNumber, String name){
+        Client resultClient = null;
 
-        while(true){
-            System.out.println("계좌 번호 : ");
-            String accNUmber = sc.next();
-            System.out.println("예금액 : ");
-            int balance = sc.nextInt();
-            System.out.println("회원 번호 : ");
-            int clientNumber = sc.nextInt();
+        //지역변수는 초기화 안시키면 사용 불가(초기값 x)
 
-            for(Client e : clientList){
-                if(e.){
-                    isSame = false;
-                    isNotSame = true;
-                }
+        for(Client c : clientList){
+            if(c.getAccInfo().getAccNUmber().equals(accNumber)
+                && c.getName().equals(name)){
+                resultClient = c;
             }
-
         }
-
+        return resultClient;
     }
 
 
     //2. 매개변수로 전달되는 예금액을 초과하는 예금액을 가진 회원들의 목록을 리턴하는
     //메서드를 정의하시오.
+
+    public List<Client> getClientList(int balance){
+        List<Client> resultList = new ArrayList<>();
+
+        for(Client c : clientList){
+            if(c.getAccInfo().getBalance() > balance){
+                resultList.add(c);
+
+            }
+        }
+        return resultList;
+    }
 
 
     // * 위 메서드를 호출하는 main 메서드를 가진 클래스는 구현할 필요 없습니다.

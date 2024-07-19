@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import BoardList from "./BoardList";
 
 // const Aaa=({넘어오는 데이터 이름})=>{}
 const Detail=({board_list})=>{
+  const navigate = useNavigate();
 
   //url로 넘어오는 데이터 받기
   const params = useParams();
@@ -27,7 +28,17 @@ const Detail=({board_list})=>{
      <div>작성자 : {board.writer}</div>
      <div>작성일 : {board.createDate}</div>
       <button type="button">뒤로가기</button>
-      <button type="button">삭제</button>
+      <button type="button" onClick={(e)=>{
+        board_list.forEach((board, i) => {
+          if(board.boardNum == boardNum){
+            board_list.splice(i,1);
+            //ㄴ i : 몇번째 반복인지...
+          }
+        });
+        //board_list.splice(?,1);
+
+      navigate('/')
+      }}>삭제</button>
     </div>
   )
 }

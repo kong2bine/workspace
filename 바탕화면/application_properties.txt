@@ -1,11 +1,6 @@
 #port 변경
 server.port=8080
 
-#thymleaf cashe false
-spring.thymeleaf.cache=false
-spring.devtools.livereload.enabled=true
-spring.devtools.restart.enabled=true
-
 
 #데이터베이스 접속 정보
 #spring.datasource.driverClassName=org.mariadb.jdbc.Driver
@@ -19,7 +14,13 @@ spring.datasource.password=mariadb
 mybatis.mapper-locations=classpath:mapper/*.xml
 
 
-//ㄴsrc -> resources -> application.properties에 복붙
+//ㄴsrc -> main-> resources -> application.properties에 복붙
+
+#thymleaf cashe false
+spring.thymeleaf.cache=false
+spring.devtools.livereload.enabled=true
+spring.devtools.restart.enabled=true
+
 
 -----------------------------------------------------------------
 

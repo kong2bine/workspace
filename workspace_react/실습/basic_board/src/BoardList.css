@@ -2,12 +2,13 @@ table{
   color: white;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid #D2DE32;
+  border: 1px solid #c8b3f8;
   padding: 5px;
+  width: 700px;
 }
 tr{
   border: 1px solid white;
-  background-color: #FFB996;
+  background-color: #fcbfd1;
 }
 td{
   padding: 15px;
@@ -19,6 +20,7 @@ button{
   height: 25px;
   width: 70px;
   border-radius: 5px;
+  margin-top: 15px;
   
 }
 

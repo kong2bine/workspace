@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.btn-div{
+  margin: 10px;
+}
+
+.list{
+  width: 700px;
+  margin: 20px auto;
+  height: 120px;
+}
+
+.head{
+  background-color: lightpink;
+  color: white;
+}
+
+button{
+  background-color: rgb(169, 197, 169);
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: 900;
+  color: white;
+  padding: 5px;
+  width: 100px;
+}

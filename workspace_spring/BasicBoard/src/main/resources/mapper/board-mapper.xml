@@ -64,7 +64,7 @@
         READ_CNT = READ_CNT + 1
         WHERE BOARD_NUM = #{boardNum}
     </update>
-	
+
 </mapper>
 
 
