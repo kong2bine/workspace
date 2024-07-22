@@ -1,0 +1,47 @@
+.container{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.header{
+  width: 100%;
+  text-align: center;
+}
+
+.header > div{
+  text-align: right;
+}
+
+.header span{
+  display: inline-block;
+  width: 50px;
+}
+
+.content{
+  margin-top: 30px;
+}
+
+/* ---------------------------------------- */
+/* 공통 컴포넌트 */
+/* button */
+.btn{
+  background-color: #436850;
+  color: white;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid #436850;
+}
+.btn:active{
+  background-color: #153448;
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+.btn-small{
+  font-size: 0.7rem;
+  padding: 2px 6px;
+}
