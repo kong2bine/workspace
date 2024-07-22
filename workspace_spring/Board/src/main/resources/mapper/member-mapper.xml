@@ -10,6 +10,10 @@
         <result column="GENDER" property="gender"/>
         <result column="MEM_ROLE" property="memRole"/>
     </resultMap>
+
+    <insert id="">
+        INSERT INTO BOARD_MEMBER() VALUES();
+    </insert>
 </mapper>
 
 

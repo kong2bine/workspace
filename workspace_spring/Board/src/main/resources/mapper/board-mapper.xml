@@ -16,8 +16,8 @@
             ,TITLE
             ,MEM_ID
             ,CREATE_DATE
-        FROM BOARD;
-        ORDER BY CREATE_DATE DESC
+        FROM BOARD
+        ORDER BY CREATE_DATE DESC;
     </select>
 </mapper>
 

@@ -3,14 +3,15 @@ import { useEffect, useState } from "react"
 
 const BoardList = ()=>{
 
-  const [board, setBoard] = useState([])
+  //조회된 게시글 목록을 저장할 변수
+  const [boardList, setBoardList] = useState([])
 
   //게시글 목록 조회
   useEffect(()=>{
     axios
     .get('/board/list')
     .then((res)=>{
-      setBoard(res.data);
+      setBoardList(res.data);
     })
     .catch((error)=>{
       alert('게시글 목록 조회 오류!')
@@ -28,7 +29,7 @@ const BoardList = ()=>{
         <input type="text"></input>
         <button className="btn">검색</button>
       </div>
-      <dib className="board-list-div">
+      <div className="board-list-div">
       <table>
         <colgroup>
           <col width='10%'/>
@@ -44,9 +45,23 @@ const BoardList = ()=>{
             <td>작성일</td>
           </tr>
         </thead>
+        <tbody>
+          {
+            boardList.map((board, i)=>{
+              return (
+                <tr key={i}>
+                  <td>{boardList.length -i}</td>
+                  <td>{board.title}</td>
+                  <td>{board.memId}</td>
+                  <td>{board.createDate}</td>
+                </tr>
+              )
+            })
+          }
+        </tbody>
         </table>
-      </dib>
-      <dib className="button-div"></dib>
+      </div>
+      <div className="button-div"></div>
       <button className="btn" type="button">글쓰기</button>
     </div>    
   )

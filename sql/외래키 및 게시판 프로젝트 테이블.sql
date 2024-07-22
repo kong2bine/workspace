@@ -1,21 +1,3 @@
--- 2024.7.22
-
--- 데이터베이스의 키(KEY)종류
--- KEY : 데이터베이스에서 각 행을 구분하는 식별자를 의미
--- 슈퍼키(SUPER KEY) : 하나의 행을 식별할 수 있는 하나 이상의 컬럼
--- 후보키 (CANDIDATE KEY) : 기본키가 될 수 있는 후보
--- 기본키 (PRIMARY KEY, PK) : 후보키 중 각 행을 구분짓기 위해 결정한 키
--- 대체키(ALTERNATE KEY) : 후보키 중에서 기본키를 제외한 키
--- 외래키(FOREIGN KEY, FK) : 
-
--- 로그인, 게시글, 댓글 관련 기능 포함 게시판 프로젝트
--- 테이블 : 회원정보, 게시글 번호, 댓글 정보
-
--- 회원정보 
--- USER : 일반회원
--- ADMIN : 관리자 
-
-
 CREATE TABLE BOARD_MEMBER (
 	MEM_ID VARCHAR(50) PRIMARY KEY
 	, MEM_PW VARCHAR(50) NOT NULL
@@ -71,32 +53,3 @@ INSERT INTO board_reply (REPLY_CONTENT, MEM_ID, BOARD_NUM)
 VALUES ('댓글4', 'admin', 1);
 INSERT INTO board_reply (REPLY_CONTENT, MEM_ID, BOARD_NUM)
 VALUES ('댓글5', 'admin', 2);
-
-SELECT * FROM board_member;
-SELECT * FROM board;
-SELECT * FROM board_reply;
-
-
--- 데이터 조회 연습
--- 회원의 이름이 '김자바'인 회원이 작성한 게시글의
--- 글번호, 제목, 작성자 아이디,
--- 글번호, 제목, 작성자를 조회, 작성일 기준 최신글부터 조회(내림차순)
-
-SELECT BOARD_NUM, TITLE, B.MEM_ID, MEM_NAME
-FROM board B, board_member M
-WHERE B.MEM_ID = M.MEM_ID
-AND MEM_NAME = '김자바'
-ORDER BY CREATE_DATE DESC;
-
--- 모든 게시글의 글번호, 글 제목, 작성자 및 해당 글에 작성된
--- 댓글의 댓글 내용, 댓글 작성자, 댓글 작성일을 조회
--- 게시글 번호 기준 최신순으로 정렬 후 
--- 같은 게시글에 대한 댓글은 가장 최근에 달린 댓글순으로 조회
-
-SELECT B.BOARD_NUM, TITLE, B.MEM_ID
-	,REPLY_CONTENT, R.MEM_ID, REPLY_DATE
-FROM board B, board_reply R
-WHERE B.BOARD_NUM = R.BOARD_NUM
--- ORDER BY CREATE_DATE DESC
-ORDER BY BOARD_NUM DESC, REPLY_NUM DESC;
-
