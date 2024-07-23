@@ -1,5 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import * as boardApi from '../apis/boardApi';
+import React from 'react'
+// ../ : 현재폴더의 상위폴더에
 
 const BoardList = ()=>{
 
@@ -8,8 +11,7 @@ const BoardList = ()=>{
 
   //게시글 목록 조회
   useEffect(()=>{
-    axios
-    .get('/board/list')
+    boardApi.getBoardList()
     .then((res)=>{
       setBoardList(res.data);
     })
@@ -61,10 +63,11 @@ const BoardList = ()=>{
         </tbody>
         </table>
       </div>
-      <div className="button-div"></div>
-      <button className="btn" type="button">글쓰기</button>
+      <div className="btn-div">
+        <button className="btn" type="button">글쓰기</button>
+      </div>
     </div>    
   )
 }
 
-export default BoardList
+export default BoardList;

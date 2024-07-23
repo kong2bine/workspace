@@ -4,7 +4,8 @@ const Join = ()=>{
   return(
     <div>
     <p>아이디</p>
-    <input></input><button type="button">중복확인</button>
+    <input></input>
+    <button type="button">중복확인</button>
     <p>비밀번호</p>
     <input></input>
     <p>비밀번호 확인</p>

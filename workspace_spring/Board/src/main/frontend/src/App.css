@@ -26,22 +26,43 @@
 /* 공통 컴포넌트 */
 /* button */
 .btn{
-  background-color: #436850;
+  background-color: #FA7579;
   color: white;
   padding: 4px 10px;
   border: none;
   border-radius: 6px;
   font-size: 0.9rem;
   cursor: pointer;
-  border: 1px solid #436850;
+  border: 1px solid #FA7575;
 }
 .btn:active{
-  background-color: #153448;
+  background-color: #ff5359;
   position: relative;
   top: 1px;
   left: 1px;
 }
+
+/* btn 클래스가 적용된 태그가 disabled 속성이 있다면 */
+.btn:disabled{
+  background-color: lightsalmon;
+
+}
+
 .btn-small{
   font-size: 0.7rem;
   padding: 2px 6px;
+}
+
+/* input 태그 */
+.inp{
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #999999;
+  padding: 5px;
+  outline: none;
+}
+
+.inp:focus{
+  outline: 1.5px solid #999999;
+  border: 1px solid #999999;
 }

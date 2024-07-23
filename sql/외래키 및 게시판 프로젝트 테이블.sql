@@ -53,3 +53,14 @@ INSERT INTO board_reply (REPLY_CONTENT, MEM_ID, BOARD_NUM)
 VALUES ('댓글4', 'admin', 1);
 INSERT INTO board_reply (REPLY_CONTENT, MEM_ID, BOARD_NUM)
 VALUES ('댓글5', 'admin', 2);
+
+-- 아이디 중복 여부를 확인하는 쿼리
+SELECT MEM_ID
+FROM board_member
+WHERE MEM_ID = '123456';
+
+SELECT MEM_ID
+FROM board_member
+WHERE MEM_ID = 'java'
+AND MEM_PW = '111';
+

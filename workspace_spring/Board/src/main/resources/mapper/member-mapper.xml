@@ -11,38 +11,34 @@
         <result column="MEM_ROLE" property="memRole"/>
     </resultMap>
 
-    <insert id="">
-        INSERT INTO BOARD_MEMBER() VALUES();
+    <!--아이디 중복 확인-->
+    <select id="isDuplicate" resultType="String">
+        SELECT MEM_ID
+        FROM BOARD_MEMBER
+        WHERE MEM_ID = #{memId};
+    </select>
+
+    <!--회원 가입-->
+    <insert id="join">
+        INSERT INTO BOARD_MEMBER(
+            MEM_ID
+            ,MEM_PW
+            ,MEM_NAME
+            ,GENDER
+        ) VALUES(
+            #{memId}
+            ,#{memPw}
+            ,#{memName}
+            ,#{gender}
+        );
     </insert>
+
+    <!--로그인-->
+    <select id="loginForm" resultMap="member">
+        SELECT MEM_ID, MEM_NAME
+        FROM BOARD_MEMBER
+        WHERE MEM_ID = #{memId}
+        AND MEM_PW = #{memPw}
+    </select>
 </mapper>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
