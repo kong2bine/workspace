@@ -36,8 +36,10 @@ public class MemberController {
 
     //로그인
     @PostMapping("/loginForm")
-    public void loginForm(@RequestBody MemberVO memberVO){
-       memberService.loginForm(memberVO);
+    public MemberVO loginForm(@RequestBody MemberVO memberVO){
+        //조회된 데이터가 없으면 member는 null이 됨
+       MemberVO member =memberService.loginForm(memberVO);
+       return member;
     }
 
 }

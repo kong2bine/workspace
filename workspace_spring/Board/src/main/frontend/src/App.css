@@ -15,7 +15,8 @@
 
 .header span{
   display: inline-block;
-  width: 50px;
+  width: 100px;
+  cursor: pointer;
 }
 
 .content{

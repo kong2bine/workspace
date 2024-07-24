@@ -64,7 +64,13 @@ const BoardList = ()=>{
         </table>
       </div>
       <div className="btn-div">
-        <button className="btn" type="button">글쓰기</button>
+        {
+          loginInfo.memId != null
+          ?
+          <button className="btn" type="button">글쓰기</button>
+          :
+          null
+        }
       </div>
     </div>    
   )

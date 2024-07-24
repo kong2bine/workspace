@@ -1,0 +1,9 @@
+로그인
+1. id,pw 입력 받음
+2. 입력받은  id,pw가 있는 회원 조회
+3. 조회된 데이터가 없으면 로그인 실패
+4. 조호된 데이터가 나오면 조회한 정보를 sessionStroage에 저장
+
+로그아웃
+1.sessionStorage에 저장된 로그인 정보 삭제
+   window.sessionStorage.removeItem(key);

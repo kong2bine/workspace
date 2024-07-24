@@ -74,8 +74,8 @@ const JoinForm = ()=>{
 
     //아이디 4~8글자
     const idLength = joinData.memId.length;
-    if(idLength<4 || idLength >8){
-      alert('아이디는 4~8 글자로 입력해야 합니다')
+    if(idLength<4 || idLength >10){
+      alert('아이디는 4~10 글자로 입력해야 합니다')
       return;
     }
 
