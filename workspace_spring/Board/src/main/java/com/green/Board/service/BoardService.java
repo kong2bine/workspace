@@ -8,4 +8,7 @@ public interface BoardService {
 
     //게시글 목록 조회
     List<BoardVO> getBoardList();
+
+    //게시글 등록
+    void insertBoard(BoardVO boardVO);
 }

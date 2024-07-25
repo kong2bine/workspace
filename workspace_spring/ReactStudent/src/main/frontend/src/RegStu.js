@@ -35,7 +35,7 @@ const RegStu=()=>{
     })
     .catch((error)=>{
       alert('오류')
-      console.log(error)      
+      console.log(error)
     })
 
   }

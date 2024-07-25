@@ -9,3 +9,9 @@ export const getBoardList =()=>{
   const response = axios.get('/board/list')
   return response;
 }
+
+//게시글 등록
+export const insertBoard = (data) => {
+  const response = axios.post('/board/insert', data);
+  return response;
+}

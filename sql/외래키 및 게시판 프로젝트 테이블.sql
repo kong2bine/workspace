@@ -62,5 +62,7 @@ WHERE MEM_ID = '123456';
 SELECT MEM_ID
 FROM board_member
 WHERE MEM_ID = 'java'
-AND MEM_PW = '111';
+AND MEM_PW = '1111';
+
+SELECT * FROM board_member;
 

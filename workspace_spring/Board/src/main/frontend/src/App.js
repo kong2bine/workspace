@@ -6,6 +6,8 @@ import BoardList from './pages/BoardList';
 import JoinForm from './pages/JoinForm';
 import LoginForm from './pages/LoginForm';
 import { useEffect, useState } from 'react';
+import BoardDetail from './pages/BoardDetail';
+import BoardWrite from './pages/BoardWrite';
 
 function App() {
   const navigate = useNavigate();
@@ -61,8 +63,14 @@ function App() {
         {/* 로그인 페이지 */}
         <Route path='/loginForm' element={<LoginForm setLoginInfo={setLoginInfo}/>}/>
 
+        {/* 게시글 작성 페이지 */}
+        <Route path='writeForm'element={<BoardWrite loginInfo={loginInfo}/>}/>
+
+        {/* 게시글 상세보기 페이지 */}
+        <Route path='/boardDetail'element={<BoardDetail/>}/>
 
       </Routes>
+      
       </div>
     </div>
   );

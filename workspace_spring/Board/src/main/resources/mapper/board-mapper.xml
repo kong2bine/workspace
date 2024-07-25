@@ -19,6 +19,18 @@
         FROM BOARD
         ORDER BY CREATE_DATE DESC;
     </select>
+
+    <insert id="insertBoard">
+        INSERT INTO BOARD(
+            TITLE
+            , CONTENT
+            , MEM_ID
+        )VALUES(
+            #{title}
+            ,#{content}
+            ,#{memId}
+        )
+    </insert>
 </mapper>
 
 
