@@ -66,7 +66,17 @@ AND MEM_PW = '1111';
 
 SELECT * FROM board_member;
 
+SELECT * FROM board;
+
+DELETE FROM board
+WHERE BOARD_NUM = 6;
+
+SELECET BOARD_NUM
+	, TITLE
+	, CONTENT
+	, MEM_ID
 	, CREATE_DATE
+FROM board
 WHERE BOARD_NUM = 1;
 
 SELECT * FROM board_reply;
