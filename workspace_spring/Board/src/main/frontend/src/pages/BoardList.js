@@ -55,7 +55,7 @@ const BoardList = ({loginInfo})=>{
               return (
                 <tr key={i}>
                   <td>{boardList.length -i}</td>
-                  <td><span onClick={(e)=>{navigate('/boardDetail')}}>{board.title}</span></td>
+                  <td><span onClick={(e)=>{navigate(`/detail/${board.boardNum}`)}}>{board.title}</span></td>
                   <td>{board.memId}</td>
                   <td>{board.createDate}</td>
                 </tr>

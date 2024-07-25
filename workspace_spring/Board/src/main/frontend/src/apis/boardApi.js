@@ -15,3 +15,9 @@ export const insertBoard = (data) => {
   const response = axios.post('/board/insert', data);
   return response;
 }
+
+//게시글 상세정보
+export const getBoardDetail = (boardNum) =>{
+  const response = axios.get(`/board/detail/${boardNum}`);
+  return response;
+}

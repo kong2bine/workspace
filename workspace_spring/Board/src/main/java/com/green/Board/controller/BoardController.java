@@ -29,9 +29,9 @@ public class BoardController {
     }
 
     //게시글 상세 조회
-    @GetMapping("/detail")
-    public String getDetail(){
-        return "게시글 상세";
+    @GetMapping("/detail/{boardNum}")
+    public BoardVO boardDetail(@PathVariable("boardNum")int boardNum){
+        return boardService.getBoardDetail(boardNum);
     }
 
 }

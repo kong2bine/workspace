@@ -31,6 +31,18 @@
             ,#{memId}
         )
     </insert>
+
+    <!-- 게시글 상세 조회 -->
+    <select id="getBoardDetail" resultMap="board">
+        SELECT BOARD_NUM
+        , TITLE
+        , CONTENT
+        , MEM_ID
+        , CREATE_DATE
+        FROM board
+        WHERE BOARD_NUM = #{boardNum};
+    </select>
+
 </mapper>
 
 

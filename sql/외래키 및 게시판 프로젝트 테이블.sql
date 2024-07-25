@@ -66,3 +66,15 @@ AND MEM_PW = '1111';
 
 SELECT * FROM board_member;
 
+	, CREATE_DATE
+WHERE BOARD_NUM = 1;
+
+SELECT * FROM board_reply;
+
+SELECT REPLY_NUM
+	,REPLY_CONTENT
+	,MEM_ID
+	,REPLY_DATE
+FROM board_reply
+WHERE BOARD_NUM = 1; 
+	
