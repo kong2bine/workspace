@@ -18,7 +18,10 @@
             , TITLE
             , MEM_ID
             , CREATE_DATE
-        FROM BOARD
+        FROM board
+        <if test=' searchValue != null and !searchValue.equals("") '>
+            WHERE ${searchType} LIKE CONCAT('%', #{searchValue} , '%')
+        </if>
         ORDER BY CREATE_DATE DESC
     </select>
 
@@ -51,32 +54,13 @@
         WHERE BOARD_NUM = #{boardNum}
     </delete>
 
+    <update id="updateBoard">
+        UPDATE BOARD
+        SET
+        TITLE = #{title},
+        CONTENT = #{content}
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
 </mapper>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

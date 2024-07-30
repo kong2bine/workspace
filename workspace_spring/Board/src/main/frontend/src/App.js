@@ -8,7 +8,7 @@ import LoginForm from './pages/LoginForm';
 import { useEffect, useState } from 'react';
 import BoardWrite from './pages/BoardWrite';
 import BoardDetail from './pages/BoardDetail';
-import BoardCor from './pages/BoardCor';
+import UpdateForm from './pages/UpdateForm';
 
 function App() {
   const navigate = useNavigate();
@@ -70,7 +70,7 @@ function App() {
           <Route path='/detail/:boardNum' element={ <BoardDetail loginInfo={loginInfo}/> }/>
 
           {/* 게시글 수정 페이지 */}
-          {/* <Route path='replyCor/:boardNum' element={<BoardCor loginInfo = {loginInfo}/>}/> */}
+          <Route path='/updateForm/:boardNum' element={<UpdateForm/>}/>
 
         </Routes>
       </div>

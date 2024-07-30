@@ -70,15 +70,15 @@ const JoinForm = () => {
 
     //아이디 4~8글자
     const idLength = joinData.memId.length;
-    if(idLength < 4 || idLength > 8){
-      alert('아이디는 4 ~ 8 글자여야 합니다.');
+    if(idLength < 4 || idLength > 12){
+      alert('아이디는 4 ~ 12 글자여야 합니다.');
       return ;
     }
 
     //회원가입
     memberApi.join(joinData)
     .then((res) => {
-      alert('회원가입을 축하합니다~');
+      alert('회원가입 완료😊');
 
       //로그인 페이지로 이동
       navigate('/loginForm');

@@ -117,12 +117,12 @@ const BoardDetail = ({loginInfo}) => {
         내용 : {boardDetail.content}<br/>
       </div>
       <div>
-        <button type='button'>목록가기</button>
+        <button type='button' onClick={(e)=>{navigate('/')}}>목록가기</button>
         {
           loginInfo.memRole == 'ADMIN' || loginInfo.memId == boardDetail.memId
           ?
           <>
-            <button type='button'>수정</button>
+            <button type='button' onClick={(e)=>{navigate(`/updateForm/${boardDetail.boardNum}`)}}>수정</button>
             <button type='button' onClick={(e)=>{deleteBoard(boardDetail.boardNum)}}>삭제</button>  
           </>
           :
