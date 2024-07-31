@@ -19,10 +19,15 @@
             , MEM_ID
             , CREATE_DATE
         FROM board
+        <!-- 검색기능 잠깐 빼두기?
         <if test=' searchValue != null and !searchValue.equals("") '>
             WHERE ${searchType} LIKE CONCAT('%', #{searchValue} , '%')
         </if>
-        ORDER BY CREATE_DATE DESC
+        -->
+        ORDER BY BOARD_NUM DESC
+        LIMIT #{displayDataCnt} OFFSET #{displayDataCnt} * (#{nowPage} -1)
+
+
     </select>
 
     <insert id="insertBoard">
@@ -61,6 +66,12 @@
         CONTENT = #{content}
         WHERE BOARD_NUM = #{boardNum}
     </update>
+
+    <!-- 전체 게시글 조회 -->
+    <select id="getBoardCnt" resultType="int">
+        SELECT COUNT(BOARD_NUM)
+        FROM BOARD
+    </select>
 
 </mapper>
 

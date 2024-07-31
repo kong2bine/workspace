@@ -138,3 +138,28 @@ FROM board
 WHERE ${searchType} LIKE CONCAT('%', ${searchValue} , '%') ;
 
 SELECT CONCAT('A', 'B','C','D');
+
+INSERT INTO board (
+   TITLE
+   , CONTENT
+   , MEM_ID
+) VALUES (
+   '3일'
+   , '곧 만난댜~~~'
+   , 'JohnnySuh'
+);
+
+SELECT * FROM board;
+
+SELECT BOARD_NUM
+   , TITLE
+   , MEM_ID
+   , CREATE_DATE
+FROM board
+ORDER BY BOARD_NUM DESC
+LIMIT 5 OFFSET 0; -- 전체 데이터 중이 5개만 조회 / OFFSET 숫자만큼 건너띄고 조회
+-- LIMIT 5 OFFSET 0; 1페이지 조회
+
+-- 테이블에 존재하는 대이터 갯수 조회
+SELECT COUNT(BOARD_NUM) -- ()안 어떤걸 넣어도 괜찮지만 웬만하면 pk 넣어 (null)땜에 
+FROM board;

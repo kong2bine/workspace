@@ -82,7 +82,7 @@ const LoginForm = ({setLoginInfo}) => {
       console.log(res.data);
 
       if(res.data != ''){
-        alert('로그인 성공🤍');
+        alert('로그인 성공😊');
 
         //sessionStorage에 로그인한 사람의 아이디, 이름, 권한을 저장
         const loginInfo = {

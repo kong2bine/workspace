@@ -4,8 +4,8 @@
 import axios from "axios"
 
 //게시글 목록 조회
-export const getBoardList = (data) => {
-  const response = axios.post('/board/list',data);
+export const getBoardList = (pageNo) => {
+  const response = axios.post('/board/list', {'pageNo' : pageNo});
   return response;
 }
 
@@ -26,3 +26,4 @@ export const UpdateBoard = (data)=>{
   const response = axios.put('/board/update', data);
   return response;
 }
+
