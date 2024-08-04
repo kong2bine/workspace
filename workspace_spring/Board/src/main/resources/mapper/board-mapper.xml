@@ -25,9 +25,7 @@
         </if>
         -->
         ORDER BY BOARD_NUM DESC
-        LIMIT #{displayDataCnt} OFFSET #{displayDataCnt} * (#{nowPage} -1)
-
-
+        LIMIT #{displayDataCnt} OFFSET #{offset}
     </select>
 
     <insert id="insertBoard">

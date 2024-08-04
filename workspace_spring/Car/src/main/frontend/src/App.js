@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import './reset.css';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import CarReg from './pages/CarReg';
 import MainBoard from './pages/MainBoard';

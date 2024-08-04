@@ -33,12 +33,15 @@ public class PageVO {
     //다음 버튼 유무
     private boolean next;
 
+    //조회 쿼리에서 OFFSET을 들어갈 데이터
+    private int offset;
+
     //생성자
     //매개 변수 :  디비에서 조회한 전체 데이터 수
     public PageVO(int totalDataCnt){
         nowPage = 1;
         displayPageCnt = 5;
-        displayDataCnt = 5;
+        displayDataCnt = 10;
         this.totalDataCnt = totalDataCnt;
     }
 
@@ -67,6 +70,8 @@ public class PageVO {
         //다음 버튼 유무
         next = (endPage != totalPageCnt);
         //ㄴ어차피 오른쪽부터 연산하기 때문에 괄호에 안감싸도 됨. 내가 헷갈릴까봐 넣은거
+
+        offset = displayDataCnt * (nowPage -1);
 
     }
 }
