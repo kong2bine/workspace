@@ -18,7 +18,7 @@ function App() {
       </div>
       <div className='banner'>
         <div>
-          <img className='banner-img' src='http://localhost:8080/images/green_book.png'/>
+          <img className='banner-img' src='http://localhost:8080/images/library.jpg'/>
         </div>
         <div className='title-div'>BOOK SHOP</div>
       </div>
