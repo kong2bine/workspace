@@ -8,7 +8,7 @@ public interface MemberService {
     void join(MemberVO memberVO);
 
     //아이디 중복 확인
-    boolean isDuplicated(String memId);
+    boolean isEnableId(String memId);
 
     //로그인
     MemberVO login(MemberVO memberVO);

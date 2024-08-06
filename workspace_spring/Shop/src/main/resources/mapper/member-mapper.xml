@@ -39,7 +39,7 @@
     </insert>
 
     <!-- 아이디 중복 확인 -->
-    <select id="isDuplicated" resultType="String">
+    <select id="isEnableId" resultType="String">
         SELECT MEM_ID
         FROM SHOP_MEMBER
         WHERE MEM_ID = #{memId}
@@ -52,7 +52,7 @@
         WHERE MEM_ID = #{memId}
         AND MEM_PW = #{memPw}
     </select>
-	
+
 </mapper>
 
 

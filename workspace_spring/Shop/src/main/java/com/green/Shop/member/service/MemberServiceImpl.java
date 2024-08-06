@@ -16,11 +16,12 @@ public class MemberServiceImpl implements MemberService{
         sqlSession.insert("memberMapper.join", memberVO);
     }
 
-    //아이디 중복 확인
+    //아이디 중복확인
     @Override
-    public boolean isDuplicated(String memId) {
-        String id = sqlSession.selectOne("memberMapper.isDuplicate", memId);
-        return id != null;
+    public boolean isEnableId(String memId) {
+        // 사용 가능한 아이디면 selectedId : null
+        String selectedId = sqlSession.selectOne("memberMapper.isEnableId", memId);
+        return selectedId == null;
     }
 
     //로그인

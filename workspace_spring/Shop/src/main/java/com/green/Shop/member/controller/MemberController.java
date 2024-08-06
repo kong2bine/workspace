@@ -19,13 +19,17 @@ public class MemberController {
     }
 
     //아이디 중복 확인
-    @GetMapping("checkId/{input}")
-    public boolean checkId(@PathVariable("inputId") String inputId){
-        return memberService.isDuplicated(inputId);
+    @GetMapping("isEnableId/{memId}")
+    public boolean isEnableId(@PathVariable("memId") String memId){
+        //사용가능한 id -> result : true
+        boolean result = memberService.isEnableId(memId);
+        return result;
     }
 
-
-
-
+    //로그인
+    @PostMapping("/login")
+    public MemberVO login(@RequestBody MemberVO memberVO){
+        return memberService.login(memberVO);
+    }
 
 }

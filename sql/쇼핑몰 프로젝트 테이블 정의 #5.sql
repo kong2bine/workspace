@@ -28,6 +28,11 @@ CREATE TABLE ITEM_CATEGORY(
  	CATE_CODE INT AUTO_INCREMENT PRIMARY KEY
  	, CATE_NAME VARCHAR(50) NOT NULL UNIQUE
  );
+ 
+-- 카테고리 데이터
+INSERT INTO item_category VALUES (1,'인터넷/IT')
+INSERT INTO item_category VALUES (2,'소설/에세이')
+INSERT INTO item_category VALUES (3,'자기계발')
 
 -- 3. 상품 정보 테이블
 -- ITEM_STATUS(상품 상태) : FOR_SALE(판매중), SOLD_OUT(매진) 
