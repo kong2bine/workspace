@@ -1,0 +1,109 @@
+import './App.css';
+import './reset.css';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import UserLayout from './pages/user/UserLayout';
+import AdminLayout from './pages/admin/AdminLayout';
+import Join from './pages/user/Join';
+import Login from './pages/user/Login';
+import { useEffect, useState } from 'react';
+import RegItem from './pages/admin/RegItem';
+
+
+//새로고침과 재랜더링은 다름
+//새로고침하면 state 변수의 값이 전부 초기화 됨
+//재렌더링하면stat w
+function App() {
+  const navigate = useNavigate();
+
+  // 로그인 정보를 저장할 수 있는 state 변수
+  const [loginInfo, setLoginInfo] = useState({});
+
+  //로그인 성공 시 loginInfo에 로그인 정보를 저장하지만
+  //새로고침하면 App.js 다시 시작하면서 loginInfo 변수의 값이 초기화
+  // 새로고침을 하더라도 sessionStroage에 로그인 정보는 존재하니,
+  // 새로고침을 할 때 만약 로그인 정보가 sessionStroage에 남아있다면
+  //loginInfo state변수에 로그인 정보를 저장시켜야 함
+  
+  //App.js가 mount(새로고침)되면 실행
+  //그림 다 그린 후에 실행
+  useEffect(()=>{
+    //세선에 저장된 로그인 정보를 가져 옴
+    const sessionLoginInfo = window.sessionStorage.getItem('loginInfo')
+
+    //세션에 로그인 정보가 있으면
+    if(sessionStorage){
+      //1.세션에서 가져온 데이터를 객체로 변환
+      const obj_loginInfo = JSON.parse(sessionLoginInfo);
+
+      //2. 로그인 정보를 loginInfo에 저장
+      setLoginInfo(obj_loginInfo);
+    }
+
+  },[])
+
+  //빈 객체인지 확인하는 코드
+  console.log(Object.keys(loginInfo));
+
+  return (
+    <div className="container">
+     <div className='login-div'>
+      <div>
+        {
+          Object.keys(loginInfo).length === 0 
+          ?
+          <ul className='header-menu'>
+            <li>
+              <span onClick={()=>{navigate('/login')}}>LOGIN</span>
+            </li>
+            <li onClick={()=>{navigate('/join')}}>JOIN</li>
+          </ul>
+          :
+          <div>
+            {loginInfo.memId}님 반갑습니다
+            <span onClick={()=>{
+              //세션에 저장된 로그인 정보 삭제
+              window.sessionStorage.removeItem('loginInfo')
+
+              //
+              setLoginInfo({});
+
+              //상품 목록 페이지로 이동
+              navigate('/')
+              }}>Logout</span>
+          </div>
+        }
+        
+      </div>
+      <div className='banner'>
+        <div>
+          <img className='banner-img' src='http://localhost:8080/images/library.jpg'/>
+        </div>
+        <div className='title-div'>BOOK SHOP</div>
+      </div>
+      </div>
+
+     <div className='layout-div'>
+      <Routes>
+      {/* 일반 유저용 */}
+        {/* 상품 목록 화면 */}
+        <Route path='/' element={<UserLayout/>}>
+        {/* 회원 가입 */}
+        <Route path='join' element={<Join/>}/>
+        {/* 로그인 페이지 */}
+        <Route path='login' element={<Login setLoginInfo ={loginInfo}/>}/>
+      </Route>
+
+
+      {/* 관리자용 */}
+      <Route path='/admin' element={<AdminLayout/>}>
+        <Route path='regItem' element={<RegItem/>}/>
+      </Route>
+      
+
+      </Routes>
+     </div>
+    </div>
+  );
+}
+
+export default App;

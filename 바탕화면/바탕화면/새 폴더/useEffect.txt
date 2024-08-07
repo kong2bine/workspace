@@ -1,0 +1,7 @@
+const [age, setAge] = useState(0);
+const [addr, setAddr] = useState('');
+
+useEffect(()=>{}); //마운트+업데이트 될 때
+useEffect(()=>{},[]); //마운트(재랜더링시 실행x)
+useEffect(()=>{},[age]); //age라는 state변수의 값이 update 될 때
+useEffect(()=>{},[age,addr]);//마운트 + age,addr

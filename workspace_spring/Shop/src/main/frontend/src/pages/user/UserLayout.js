@@ -4,9 +4,16 @@ import { Outlet } from 'react-router-dom'
 const UserLayout = () => {
   return (
     <div>
-      <div>유저 전용 페이지 입니다</div>
-      <Outlet/>
+    <div className='user-menu-div'>
+      <ul className='menu-ul'>
+        <li>전체상품</li>
+        <li>인터넷/IT</li>
+        <li>소설</li>
+        <li>자기계발</li>
+      </ul>
     </div>
+    <Outlet />
+  </div>
   )
 }
 

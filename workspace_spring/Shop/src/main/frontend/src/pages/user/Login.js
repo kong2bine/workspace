@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { json, useNavigate } from 'react-router-dom';
 import Modal from '../../common/Modal';
 
-const Login = (setLoginInfo) => {
+const Login = ({setLoginInfo, loginInfo}) => {
 
   //Login 버튼 클릭 시 화면에 보여지는 모달창의 상태
   const [beforeLoginModla, setBeforeLoginModal] = useState(false)
@@ -19,7 +19,7 @@ const Login = (setLoginInfo) => {
 
   const data = window.sessionStorage.getItem('member');
   console.log(data)
-  console.log(data.memId);
+  //console.log(data.memId);
 
  // const result = JSON.parse(data);
  //console.log(result);
@@ -83,10 +83,13 @@ const Login = (setLoginInfo) => {
         const json_loginInfo = JSON.stringify(loginInfo);
 
         //sessionStorage에 로그인한 회원의 아이디, 이름, 권한정보 등록
-        window.sessionStorage.setItem('loginInfo','hong')
+        window.sessionStorage.setItem('loginInfo',json_loginInfo)
+
+        //로그인 정보를 저장하기 위해 만든 state 변수 loginInfo(App.js에 생성)애
+        //로그인 정보를 저장
+        setLoginInfo(loginInfo);
 
       }
-      setAfterLoginModal(true);
       
     })
     .catch((error)=>{
@@ -112,8 +115,14 @@ const Login = (setLoginInfo) => {
   //login 쿼리 실행 후 뜨는 모달 안의 확인 버튼 클릭 시 실행되는 내용
   function handleBtn(){
     if(isLoginSuccess){//로그인 성공 시 확인 버튼 내용
-      //로그인 성공 시 상품 목록 페이지로 이동
-      navigate('/')
+      //일반 유저 -> 상품목록페이지
+      //관리자 -> 상품등록페이지
+      if(loginInfo.memRole == 'USER'){
+        navigate('/')
+      }
+      else if(loginInfo.memRole == 'ADMIN'){
+        navigate('/admin/regItem')
+      }
     }
   }
 
@@ -135,7 +144,7 @@ const Login = (setLoginInfo) => {
           </tr>
         </tbody>
       </table>
-      <button type='button' onClick={(e)=>{successLogin()}}>로그인</button>
+      <button type='button' className='btn btn-primary' onClick={(e)=>{successLogin()}}>로그인</button>
 
       {/* login 중 id, pw 입력 여부 확인 모달창 */}
       {

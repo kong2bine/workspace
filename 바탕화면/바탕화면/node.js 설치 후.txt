@@ -1,0 +1,25 @@
+node.js 설치하고
+VsCode 터미널에서 최초 1회만 실행
+
+npm install -g create-react-app
+
+
+npx create-react-app .
+' .' : 현재 폴더에 만들겠다는 것
+
+서버와 데이터 통신(Axios)
+npm install axios
+
+페이지 이동(Route, Routesm Link, navigate)
+npm install react-router-dom
+
+index.js가서 </BrowserRouter>로 APP감싸야함
+
+리액트 package.json
+맨뒤에서 두번째 중괄호 뒤에 ',' 적고
+"proxy":"http://localhost:8080" 입력
+
+
+------------------------------------------
+프로젝트 시작 : npm start
+종료 : ctrl c
