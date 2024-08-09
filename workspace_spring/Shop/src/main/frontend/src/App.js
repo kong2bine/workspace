@@ -7,6 +7,8 @@ import Join from './pages/user/Join';
 import Login from './pages/user/Login';
 import { useEffect, useState } from 'react';
 import RegItem from './pages/admin/RegItem';
+import ItemList from './pages/user/ItemList';
+
 
 //새로고침과 재랜더링은 다르다!!!!!
 //새로고침하면 state 변수의 값이 전부 초기화 된다.
@@ -89,8 +91,8 @@ function App() {
         <Routes>
           {/* 일반 유저용 */}
           <Route path='/' element={ <UserLayout /> }>
-            {/* 상품 목록 화면 */}
-            <Route path='' element={ <div>상품목록화면</div> }/>
+            {/* 상품 목록 화면
+            <Route path='' element={ <div>상품목록화면</div> }/> */}
 
             {/* 회원가입 페이지 */}
             <Route path='join' element={ <Join /> }/>
@@ -100,6 +102,9 @@ function App() {
                   element={ <Login setLoginInfo={setLoginInfo} 
                                   loginInfo={loginInfo}/> }/>
 
+            {/* 상품 목록 */}
+            <Route path='' element={<ItemList/>}/>
+
           </Route>
 
           {/* 관리자용 */}
@@ -108,7 +113,7 @@ function App() {
             <Route path='test1' element={ <div>상품등록페이지</div> }/>
 
             {/* 상품 등록 화면 */}
-            <Route path='regItem' element={ <RegItem/> }/>
+            <Route path='regItem' element={<RegItem/>}/>
              
           </Route>
         </Routes>

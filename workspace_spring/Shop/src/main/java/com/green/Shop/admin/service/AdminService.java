@@ -11,5 +11,12 @@ public interface AdminService {
     List<CategoryVO> getCategoryList();
 
     //상품 등록
-    void itemList(ItemVO itemVO);
+    void insertItem(ItemVO itemVO);
+
+    //상품이미지 등록
+    void insertImgs(ItemVO itemVO);
+
+    //다음에 들어갈 item_code 조회
+    int getNextItemCode();
+
 }

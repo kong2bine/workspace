@@ -38,5 +38,9 @@ implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 testImplementation 'org.springframework.security:spring-security-test'
 implementation 'org.springframework.boot:spring-boot-starter-security'
 
+#스프링 파일 업로드 용량(미 설정 시 기본으로 1MB)
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
+
 
 

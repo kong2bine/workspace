@@ -4,6 +4,7 @@ import { json, useNavigate } from 'react-router-dom';
 import Modal from '../../common/Modal';
 
 const Login = ({setLoginInfo, loginInfo}) => {
+  const navigate = useNavigate();
 
   //Login 버튼 클릭 시 화면에 보여지는 모달창의 상태
   const [beforeLoginModla, setBeforeLoginModal] = useState(false)
@@ -14,23 +15,20 @@ const Login = ({setLoginInfo, loginInfo}) => {
   //로그인 성공 실패 여부를 저장하는 변수
   const [isLoginSuccess, setIsLoginSuccess] = useState(false)
 
-
-  //window.sessionStorage.setItem('member', JSON.stringify());
-
-  const data = window.sessionStorage.getItem('member');
-  console.log(data)
-  //console.log(data.memId);
-
- // const result = JSON.parse(data);
- //console.log(result);
-
-
-  const navigate = useNavigate();
-
+  //입력한 id,pw를 저장할 변수
   const [loginData, setLoginData] = useState({
     memId : '',
     memPw : ''
   });
+
+  //window.sessionStorage.setItem('member', JSON.stringify());
+
+  // const data = window.sessionStorage.getItem('member');
+  // console.log(data)
+  //console.log(data.memId);
+
+ // const result = JSON.parse(data);
+ //console.log(result);
 
   //입력한 id,pw를 loginData에 저장하는 함수(입력할 때 마다 실행)
   function changeLoginData(e){
@@ -53,7 +51,7 @@ const Login = ({setLoginInfo, loginInfo}) => {
     .then((res)=>{
       setAfterLoginModal(true)
       //자바에서 null 데이터가 전달되면 res.data는 빈문자('')데이터로 변환함      
-      if(res.data != ''){
+      if(res.data == ''){
         setIsLoginSuccess(false);        
         
         // alert('📖📗📘📚📙📔📖📕')
@@ -92,9 +90,7 @@ const Login = ({setLoginInfo, loginInfo}) => {
       }
       
     })
-    .catch((error)=>{
-      console.log(error)
-    })
+    .catch((error)=>{console.log(error)})
   }
 
   //login 쿼리 실행 후 뜨는 모달 안의 내용
@@ -127,7 +123,7 @@ const Login = ({setLoginInfo, loginInfo}) => {
   }
 
   return (
-    <div className='login-table-div'>
+    <div className='join-div'>
       <table className='login-table'>
         <tbody>
           <tr>
@@ -151,14 +147,12 @@ const Login = ({setLoginInfo, loginInfo}) => {
         beforeLoginModla
         ?
         <Modal content={()=>{
-          return(
-            <div>ID, PW 필수 입력</div>
-          )
-        }}
-            setIsShow={setBeforeLoginModal}
-            clickCloseBtn={()=>{
-              alert(1);
-            }}/>
+                        return(
+                          <div>ID, PW 필수 입력</div>
+                        )
+                      }}
+                          setIsShow={setBeforeLoginModal}
+                          clickCloseBtn={()=>{}}/>
         :
         null
       }
