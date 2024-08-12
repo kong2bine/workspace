@@ -8,7 +8,7 @@ const [itemList, setItemList] = useState([]);
 
 //상품 목록 조회
 useEffect(()=>{
-  axios.get('/api_item/itemList',itemList)
+  axios.get('/api_item/itemList')
   .then((res)=>{
     setItemList(res.data)
   })
@@ -25,7 +25,7 @@ console.log(itemList);
         itemList.map((item, i)=>{
           return(
             <div className='item-div' key={i}>
-              <img src='http://localhost:8080/upload/${item.imgList[0].attachedFileName}'/>
+              <img src={`http://localhost:8080/upload/${item.imgList[0].attachedFileName}`}/>
               <h4>{item.ItemList}</h4>
               <p>{'￦'+item.itemPrice.toLocaleString() + '원'}</p>
             </div>

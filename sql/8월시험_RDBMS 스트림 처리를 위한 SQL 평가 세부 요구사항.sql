@@ -25,12 +25,12 @@ WHERE MEM_NUM = 1;
 
 SELECT * FROM MY_MEMBER;
 
-
 -- 4번 : 수정해야함 꼭 다시 보기
-SELECT EMPNO, ENAME, SAL, COMMIT
+SELECT EMPNO, ENAME, SAL, COMM
 FROM emp E, dept D 
 WHERE E.DEPTNO = D.DEPTNO 
 AND SAL >= 300
+AND SAL < 5000;
 
 -- 5번
 -- 6번 : 아직 못 푸는 문제

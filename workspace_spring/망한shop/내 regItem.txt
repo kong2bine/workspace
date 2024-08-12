@@ -1,0 +1,31 @@
+//3. 데이터를 가진 form 객체를 axios 통신에서 자바로 전달
+    //axios.post('/admin/insertItem',insertItemData, fileConfig)
+    axios.post('/admin/insertItem',itemForm, fileConfig)
+    .then((res)=>{
+      if(res.data == ''){
+        alert('상품등록')
+        setItemSucces(false)        
+      }
+      else{
+        setItemSucces(true)
+      }
+      //상품정보
+      const itemInfo = {
+        cateCode : res.data.cateCode,
+        itemName : res.data.itemName,
+        itemPrice : res.data.itemPrice,
+        itemIntro : res.data.itemIntro
+      }
+
+      const json_itemInfo = JSON.stringify(itemInfo)
+
+      window.sessionStorage.setItem(
+        'itemInfo',json_itemInfo);
+
+        //setItemInfo(itemInfo);
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+  }
+  

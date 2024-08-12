@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 const UserLayout = () => {
   return (
     <div>
-    <div className='user-menu-div'>
+    <div className='menu-div'>
       <ul className='menu-ul'>
         <li>전체상품</li>
         <li>인터넷/IT</li>

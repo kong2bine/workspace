@@ -10,7 +10,7 @@ const RegItem = () => {
   const [categoryList, setCategoryList] = useState([]);
   
   //상품등록 실패시 보여지는 함수
-  const [isItemSucces, setItemSucces] = useState(false);
+  //const [isItemSucces, setItemSucces] = useState(false);
 
   //상품등록 시 가져가야할 데이터를 저장할 state 변수
   const [insertItemData, setInsertItemData] = useState({
@@ -48,7 +48,7 @@ const RegItem = () => {
   function insertItem(){
     //axios 통신으로 자바로 갈 때 첨부파일이 있으면
     //반드시 아래의 설정코드를 axios에 추가 
-    const fileConfig = {headers : {'Content-Type':'multipart/form'}}
+    const fileConfig = {headers : {'Content-Type' : 'multipart/form-data'}};
 
     //위의 설정코드를 axios 통신할 떄 추가하면 
     //자바로 넘어가는 데이터를 전달하는 방식이 달라짐
@@ -70,33 +70,11 @@ const RegItem = () => {
 
     //3. 데이터를 가진 form 객체를 axios 통신에서 자바로 전달
     //axios.post('/admin/insertItem',insertItemData, fileConfig)
-    axios.post('/admin/insertItem',itemForm, fileConfig)
-    .then((res)=>{
-      if(res.data == ''){
-        alert('상품등록')
-        setItemSucces(false)        
-      }
-      else{
-        setItemSucces(true)
-      }
-      //상품정보
-      const itemInfo = {
-        cateCode : res.data.cateCode,
-        itemName : res.data.itemName,
-        itemPrice : res.data.itemPrice,
-        itemIntro : res.data.itemIntro
-      }
-
-      const json_itemInfo = JSON.stringify(itemInfo)
-
-      window.sessionStorage.setItem(
-        'itemInfo',json_itemInfo);
-
-        //setItemInfo(itemInfo);
+    axios.post('/api_admin/insertItem', itemForm, fileConfig)
+    .then((res) => {
+      alert('상품등록');
     })
-    .catch((error)=>{
-      console.log(error)
-    })
+    .catch((error) => {console.log(error);});
   }
   
 
@@ -139,7 +117,6 @@ const RegItem = () => {
         </div>
         <div>
           <input type='file' onChange={(e)=>{
-            console.log(e.target.files[0]);
             setSubImg(e.target.files[0]);
           }}/>
         </div>

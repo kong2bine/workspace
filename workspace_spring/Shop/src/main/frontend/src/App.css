@@ -5,6 +5,7 @@
 #6482AD
 */
 
+
 .container{
 	width: 100vw;
 }
@@ -59,6 +60,54 @@
   width: 100px;
   text-align: center;
   cursor: pointer;
+}
+
+.menu-div{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.menu-div > .menu-ul{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.menu-div > .menu-ul > li{
+  /* border: 1px solid black; */
+  font-size: 1.2rem;
+}
+
+/* 사이드바 디자인 */
+.side-menu-div{
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.side-menu-ul{
+  background-color: rgba(230, 230, 230, 0.1);
+  width: 250px;
+  box-shadow: 3px 1px 3px #eeeeee;
+}
+
+.menu-ul span{
+  cursor: pointer;
+}
+
+.side-menu-ul >li {
+  padding: 20px 16px;
+  border-bottom: 2px solid;
+  color: #808192;
+  justify-content: space-between;
+}
+
+.side-menu-ul >li > span:nth-child(1){
+  cursor: pointer;
+}
+
+.bi-caret-right-fill{
+  color: lightskyblue;
+  font-size: 0.9rem;
 }
 
 /* -------------------- */
