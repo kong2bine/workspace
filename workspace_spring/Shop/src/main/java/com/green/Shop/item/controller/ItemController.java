@@ -19,6 +19,11 @@ public class ItemController {
     @GetMapping("/itemList")
     public List<ItemVO> itemList(){
         return itemService.getItemList();
+    }
 
+    //상품 상세보기
+    @GetMapping("/itemDetail")
+    public List<ItemVO> itemDetail(){
+        return itemService.getItemDetail();
     }
 }

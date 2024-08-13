@@ -3,7 +3,20 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import ItemManage from './ItemManage';
 
 
-const AdminLayout = () => {
+const AdminLayout = () =>{
+  const itemVO = [{
+    'itemCode' : 1,
+    'itemName' : 'java',
+    'itemPrice' : 1000,
+    'itemIntro' : '!!',
+    'itemStock' : 0,
+    'itemStatus' : null,
+    'cateCode' : 2,
+    'imgList' :0
+  }
+]
+
+
   const navigate = useNavigate();
   //상단 메뉴 버튼 클릭시 보여지는 화면
   const [clickMenuBtn, setClickMenuBtn] = useState();
@@ -95,10 +108,20 @@ const AdminLayout = () => {
     <div>
      <div className='menu-div'>
         <ul className='menu-ul'>
-          <li><span onClick={()=>{setSideMenu('itemManage')}}>상품관리</span></li>
-          <li><span onClick={()=>{setSideMenu('saleManage')}}>구매관리</span></li>
-          <li><span onClick={()=>{setSideMenu('userManage')}}>유저관리</span></li>
-          <li><span onClick={()=>{setSideMenu('recordManage')}}>매출관리</span></li>
+          <li><span onClick={()=>{
+            setSideMenu('itemManage')
+            navigate('/admin/itemManage')
+            }}>상품관리</span></li>
+          <li><span onClick={()=>{
+            setSideMenu('saleManage')
+            navigate('/admin/categoryManage')
+            }}>구매관리</span></li>
+          <li><span onClick={()=>{setSideMenu('userManage')
+            navigate('/admin/searchUser')
+          }}>유저관리</span></li>
+          <li><span onClick={()=>{setSideMenu('recordManage')
+            navigate('/admin/recordOfMonth')
+          }}>매출관리</span></li>
         </ul>
       </div>
       <div className='side-menu-div'>

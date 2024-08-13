@@ -69,9 +69,6 @@ public class AdminController {
         //3. itemVO에 imgList 저장
         itemVO.setImgList(imgList);
 
-        //상품 이미지 정보
-        adminService.insertImgs(itemVO);
-
         //상품 이미지 정보 등록
         adminService.insertImgs(itemVO);
     }

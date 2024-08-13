@@ -13,6 +13,7 @@ import CategoryManage from './pages/admin/CategoryManage';
 import SaleHistoryOfMonth from './pages/admin/SaleHistoryOfMonth';
 import SearchUser from './pages/admin/SearchUser';
 import RecordOfMonth from './pages/admin/RecordOfMonth';
+import ItemDetail from './pages/user/ItemDetail';
 
 
 //새로고침과 재랜더링은 다르다!!!!!
@@ -106,6 +107,9 @@ function App() {
                   element={ <Login setLoginInfo={setLoginInfo} 
                                   loginInfo={loginInfo}/> }/>
 
+            {/* 상품 상세보기 화면 */}
+            <Route path='itemDetail' element={<ItemDetail/>}/>
+
           </Route>
 
           {/* 관리자용 */}
@@ -114,17 +118,16 @@ function App() {
             <Route path='test1' element={ <div>상품등록페이지</div> }/>
             {/* 상품 등록 화면 */}
             <Route path='regItem' element={<RegItem/>}/>
-            {/* 카테고리 관리 화면 */}
-            <Route path='categoryManage' element={<CategoryManage/>}/>
             {/* 상품 관리 화면 */}
             <Route path='itemManage' element={<ItemManage/>}/>
-            {/* 상품 구매 관리 화면 */}
+            {/* 카테고리 관리 화면 */}
+            <Route path='categoryManage' element={<CategoryManage/>}/>
+            {/* 이달의 구매내역 */}
             <Route path='saleHistoryOfMonth' element={<SaleHistoryOfMonth/>}/>
-            {/* 상품 유저 관리 화면 */}
+            {/* 유저 검색 */}
             <Route path='searchUser' element={<SearchUser/>}/>
-            {/* 상품 매출 관리 화면 */}
+            {/* 상품 매출 관리  */}
             <Route path='recordOfMonth' element={<RecordOfMonth/>}/>
-             
           </Route>
         </Routes>
       </div>

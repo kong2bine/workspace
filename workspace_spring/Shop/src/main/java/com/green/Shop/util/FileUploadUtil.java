@@ -22,7 +22,7 @@ public class FileUploadUtil {
             imgVO = new ImgVO();
 
             //업로드 될 경로
-            String uploadPath = "D:\\01-STUDY\\dev\\workspace\\workspace_spring\\Shop\\src\\main\\resources\\static\\upload";
+            String uploadPath = "D:\\01-STUDY\\dev\\workspace\\workspace_spring\\Shop\\src\\main\\resources\\static\\upload\\";
 
             //내가 선택한 원본 파일명
             String originFileName = uploadFile.getOriginalFilename();
@@ -31,26 +31,24 @@ public class FileUploadUtil {
             String uuid = UUID.randomUUID().toString();
 
             //원본 파일에서 확장자만 추출
-            String a = "abc.jpg";
-            a.substring(3);
+                // String a = "abc.jpg";
+                // a.substring(3);
 
-            String b = "ab.cd.ef";
-            //indexOf : 찾는 문자의 index (위치)
-            b.lastIndexOf(".");
+                //String b = "ab.cd.ef";
+                //indexOf : 찾는 문자의 index (위치)
+                //b.lastIndexOf(".");
 
             //어떤 파일이 있어도 확장자만 추출할 수 있는 코드
             //abc.jpg
             //java.xlsx
             //python.pdf
-            int dotIndex = originFileName.lastIndexOf(".");
-            String extension = originFileName.substring(dotIndex);
+            String extension = originFileName.substring(originFileName.lastIndexOf("."));
 
             //첨부될 파일명
             String attachedFileName = uuid + extension;
 
-
             //첨부될 파일 생성
-            File file = new File(uploadPath + originFileName);
+            File file = new File(uploadPath + attachedFileName);
 
             //첨부 기능 실행
             try {
@@ -59,12 +57,11 @@ public class FileUploadUtil {
                 //첨부된 파일 정보를 imgVO에 저장
                 imgVO.setOriginFileName(originFileName);
                 imgVO.setAttachedFileName(attachedFileName);
-
-            }catch (IOException e){
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
         }
+
         return imgVO;
 
     }

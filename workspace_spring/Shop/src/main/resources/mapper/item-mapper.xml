@@ -50,6 +50,16 @@
 		ORDER BY ITEM_CODE DESC;
 	</select>
 
+	<select id="getItemDetail" resultMap="item">
+		SELECT ITEM.ITEM_CODE
+			, ITEM_NAME
+			, ITEM_PRICE
+			, ITEM_INTRO
+		FROM SHOP_ITEM ITEM, ITEM_IMG IMG
+		WHERE ITEM.ITEM_CODE, ITEM_IMG IMG;
+	</select>
+
+
 </mapper>
 
 

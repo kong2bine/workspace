@@ -70,7 +70,7 @@ const RegItem = () => {
 
     //3. 데이터를 가진 form 객체를 axios 통신에서 자바로 전달
     //axios.post('/admin/insertItem',insertItemData, fileConfig)
-    axios.post('/api_admin/insertItem', itemForm, fileConfig)
+    axios.post('/admin/insertItem', itemForm, fileConfig)
     .then((res) => {
       alert('상품등록');
     })
@@ -105,8 +105,10 @@ const RegItem = () => {
         </div>
         <div>
           <div>상품 소개</div>
-          <input type='text'
-          name='itemIntro' onChange={(e)=>{changeInsertItemData(e)}}></input>
+          <div>
+            <input type='text'
+            name='itemIntro' onChange={(e)=>{changeInsertItemData(e)}}></input>
+          </div>
         </div>
         <div>
           <input type='file' onChange={(e)=>{
