@@ -3,7 +3,9 @@ package com.green.Shop.item.controller;
 import com.green.Shop.item.service.ItemService;
 import com.green.Shop.item.vo.ItemVO;
 import jakarta.annotation.Resource;
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,8 +24,9 @@ public class ItemController {
     }
 
     //상품 상세보기
-    @GetMapping("/itemDetail")
-    public List<ItemVO> itemDetail(){
-        return itemService.getItemDetail();
+    @GetMapping("/getItemDetail/{itemCode}")
+    public ItemVO getItemDetail(@PathVariable("itemCode") int itemCode){
+       return itemService.getItemDetail(itemCode);
     }
+
 }

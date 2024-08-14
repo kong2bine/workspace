@@ -30,7 +30,7 @@ console.log(itemList);
             <div className='item-div' key={i}>
               <img src={
                 `http://localhost:8080/upload/${item.imgList[0].attachedFileName}`
-                } onClick={()=>{navigate('/itemDetail')}}/>
+                } onClick={()=>{navigate(`/itemDetail/${item.itemCode}`)}}/>
               <h4>{item.itemName}</h4>
               <p>{'￦'+item.itemPrice.toLocaleString() + '원'}</p>
             </div>

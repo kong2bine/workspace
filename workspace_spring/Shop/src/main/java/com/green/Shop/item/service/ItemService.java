@@ -9,5 +9,5 @@ public interface ItemService {
     List<ItemVO> getItemList();
 
     //상품 상세 조회
-    List<ItemVO> getItemDetail();
+    ItemVO getItemDetail(int itemCode);
 }
