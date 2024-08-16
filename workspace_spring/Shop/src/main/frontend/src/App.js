@@ -20,6 +20,9 @@ import CartList from './pages/user/CartList';
 //새로고침과 재랜더링은 다르다!!!!!
 //새로고침하면 state 변수의 값이 전부 초기화 된다.
 //재랜더링하면 state 변수의 값은 보존된다.
+
+//state 변경함수는 모든 코드가 실행된 후 일괄적으로 한 번에 처리
+//state 변경함수는 비동기 방식이기 때문에 주의해야 함
 function App() {
   const navigate = useNavigate();
 
@@ -57,6 +60,7 @@ function App() {
     <div className="container">
       <div className='login-div'>
         <div>
+          <span onClick={()=>{navigate('/')}}>HOME</span>
           {
             Object.keys(loginInfo).length == 0
             ?
@@ -70,7 +74,7 @@ function App() {
             </ul>
             :
             <div className='login-info'>
-              {loginInfo.memId}님 반갑습니다.
+              {loginInfo.memId}님 반갑습니다🤍
               <span onClick={() => {
                 //세션에 저장된 로그인 정보 삭제
                 window.sessionStorage.removeItem('loginInfo');
@@ -80,7 +84,7 @@ function App() {
 
                 //상품 목록 페이지로 이동
                 navigate('/');
-              }}>Logout</span>
+              }}> Logout </span>
             </div>
           }
         </div>
@@ -112,7 +116,7 @@ function App() {
             <Route path='itemDetail/:itemCode' element={<ItemDetail/>}/>
 
             {/* 장바구니 목록 */}
-            <Route path='cartList' element={<CartList/>}/>
+            <Route path='getCartList' element={<CartList />}/>
 
           </Route>
 

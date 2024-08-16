@@ -25,6 +25,13 @@ const ItemDetail = () => {
   //수량을 저장 할 변수
   const [itemCnt, setItemCnt] = useState(1);
 
+  //장바구니 담기 버튼 클릭 시 자바로 가져가는 데이터
+  const [insertCartData, setInsertCartData] = useState({
+    'itemCode' : itemCode,
+    'cartCnt' : itemCnt,
+    'memId' : JSON.parse( window.sessionStorage.getItem('loginInfo')).memId
+  });
+
   //상품 상세 조회
   useEffect(()=>{
     axios.get(`/api_item/getItemDetail/${itemCode}`)
@@ -58,13 +65,36 @@ const ItemDetail = () => {
     const cnt = Number(e.target.value)
 
     if(cnt < 1 || cnt > 10){
+      alert('수량은 최소 1개, 최대 10까지 구매 가능합니다😊')
       setItemCnt(1)
       setTotalPrice(itemDetail.itemPrice)
+
+       //장바구니 등록 시, 필요 시 수량 데이터를 변경
+       setInsertCartData({...insertCartData, 'cartCnt':1});
     }
     else{
       setTotalPrice(itemDetail.itemPrice * Number(e.target.value))
       setItemCnt(e.target.value)
+
+      //장바구니 등록 시, 필요 시 수량 데이터를 변경
+      setInsertCartData({...insertCartData, 'itemCnt':e.target.value});
     }
+  }
+
+  //장바구니 담기 버튼 클릭 시 실행하는 함수
+  function insertCart(){    
+    axios.post('/api_cart/insert',insertCartData)
+    .then((res)=>{
+      const result = window.confirm('장바구니에 담기 완료🛒 더 구매하고 싶은 책이 있으신가요?📚😏')
+
+      //취소를 선택하면 장바구니 목록 페이지로 이동
+      if(!result){
+        navigate('/getCartList')
+      }
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
   }
 
   return (
@@ -86,7 +116,8 @@ const ItemDetail = () => {
         <p>총 가격 : {'￦'+ totalPrice.toLocaleString()+'원'}</p>
         <div className='item-button-div'>
           <button type='button' className='btn btn-primary'>구매하기</button>
-          <button type='button' className='btn btn-primary'>장바구니에 담기</button>
+          <button type='button' className='btn btn-primary'
+          onClick={(e)=>{insertCart()}}>장바구니에 담기</button>
         </div>
       </div>
       </div>
