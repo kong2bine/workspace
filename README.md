@@ -1,6 +1,6 @@
 <div align="center">
 
-![header](https://capsule-render.vercel.app/api?type=rounded&text=welcome%20to%20my%20world!&color=auto)
+![header](https://capsule-render.vercel.app/api?type=waving&text=welcome%20to%20my%20world!&color=auto)
 
 ### 🤗INTRODUCTION🧚‍♀️
 안녕하세요! 백엔드 개발자가 되고 싶어 열심히 공부 중인 신입 개발자입니다.
