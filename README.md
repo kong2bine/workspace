@@ -7,6 +7,9 @@
 
 ### 😎TECH STACK😆
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white)
+![JAVA](https://img.shields.io/badge/React-61DAFB?style=flat&logo=JAVA&logoColor=white)
+![JavaScript](https://img.shields.io/badge/React-61DAFB?style=flat&logo=JavaScript&logoColor=white)
+![MySQL](https://img.shields.io/badge/React-61DAFB?style=flat&logo=MySQL&logoColor=white)
 
 ### 📖STUDYING📚
 
