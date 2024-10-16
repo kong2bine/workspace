@@ -14,6 +14,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white)
 
 ### 📖STUDYING📚
-![](./profile-3d-contrib/profile-green-animate.svg)
 
 </div>
+
+![](./profile-3d-contrib/profile-green-animate.svg)
